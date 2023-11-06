@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftyJSON
 import SDWebImageSwiftUI
 
-class getData: ObservableObject {
+class DataGetter: ObservableObject {
     @Published var data = [Book]()
     
     init() {
