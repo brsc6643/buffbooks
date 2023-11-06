@@ -13,9 +13,10 @@ struct BuyView: View {
     var body: some View {
         NavigationView {
             Buy()
-                .navigationBarTitle("Buy")
+                //.navigationBarTitle("Buy")
                 .padding()
                 .background(Color.color1.edgesIgnoringSafeArea(.all))
+                .foregroundColor(Color.color4)
         }
         .navigationTitle("Buy")
                     .toolbarBackground(
