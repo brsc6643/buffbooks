@@ -14,7 +14,7 @@ class DataGetter: ObservableObject {
     
     init() {
         
-        let url = "https://www.googleapis.com/books/v1/volumes?q=java"
+        let url = "https://www.googleapis.com/books/v1/volumes?q=a"
         let session = URLSession(configuration: .default)
         
         session.dataTask(with: URL(string: url)!) { (data, _, err) in

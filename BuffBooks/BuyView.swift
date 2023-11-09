@@ -23,6 +23,11 @@ struct BuyView: View {
                         for: .navigationBar)
                     .toolbarBackground(.visible, for: .navigationBar)
                     .toolbarColorScheme(.dark, for: .navigationBar)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            NavigationLink(destination: SearchView(books: $books, searchText: <#T##arg#>)
+                        }}
+                    }
 
 
     }

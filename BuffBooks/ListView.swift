@@ -10,21 +10,17 @@ import SwiftyJSON
 import SDWebImageSwiftUI
 
 struct ListView : View {
-    @ObservedObject var Books = DataGetter()
+    @ObservedObject var books = DataGetter()
     
     var body: some View{
-        List(Books.data){ i in
-            
+        List(books.data){ i in
             HStack {
-                
                 if i.imurl != "" {
                     WebImage(url: URL(string: i.imurl)!).resizable().frame(width: 120, height: 170).cornerRadius(10)
                 }
-                
                 else {
                     Image("Book").resizable().frame(width: 120, height: 170).cornerRadius(10)
                 }
-                
                 VStack(alignment: .leading, spacing: 10) {
                     
                     Text(i.title).fontWeight(.bold)
@@ -33,6 +29,9 @@ struct ListView : View {
                     
                     Text(i.desc).font(.caption).lineLimit(4).multilineTextAlignment(.leading)
                 }
+                Button(action: {
+                    
+                })
             }
         }
     }
