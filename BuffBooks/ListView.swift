@@ -8,35 +8,51 @@
 import SwiftUI
 import SwiftyJSON
 import SDWebImageSwiftUI
-
-struct ListView : View {
-    @ObservedObject var books : DataGetter
-    
-    var body: some View{
-        List(books.data){ i in
-            HStack {
-                if i.imurl != "" {
-                    WebImage(url: URL(string: i.imurl)!).resizable().frame(width: 120, height: 170).cornerRadius(10)
-                }
-                else {
-                    Image("Book").resizable().frame(width: 120, height: 170).cornerRadius(10)
-                }
-                VStack(alignment: .leading, spacing: 10) {
-                    Button(action: {
-                        books.selectedBook = i
-                    }) {
-                        Text(i.title).fontWeight(.bold)
-                        Text(i.authors)
-                        Text(i.desc).font(.caption).lineLimit(4).multilineTextAlignment(.leading)
+ 
+struct ListView: View {
+    @ObservedObject var booksGetter = DataGetter()
+    @State private var searchText = ""
+ 
+    var body: some View {
+        NavigationView {
+            VStack {
+                SearchBarView(text: $searchText, placeholder: "Search Books")
+                    .padding(.top, 8)
+ 
+                List(booksGetter.data) { book in
+                    HStack {
+                        if !book.imurl.isEmpty {
+                            WebImage(url: URL(string: book.imurl)!)
+                                .resizable()
+                                .frame(width: 120, height: 170)
+                                .cornerRadius(10)
+                        } else {
+                            Image("Book")
+                                .resizable()
+                                .frame(width: 120, height: 170)
+                                .cornerRadius(10)
+                        }
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text(book.title).fontWeight(.bold)
+                            Text(book.authors)
+                            Text(book.desc).font(.caption).lineLimit(4).multilineTextAlignment(.leading)
+                        }
+                    }
+                    .onTapGesture {
+                        booksGetter.selectedBook = book
                     }
                 }
+                .listStyle(PlainListStyle())
+            }
+            .sheet(item: $booksGetter.selectedBook) { book in
+                BookDetailView(book: $booksGetter.selectedBook)
             }
         }
-        .sheet(item: $books.selectedBook, onDismiss: {})
-         { i in
-             BookDetailView(book: i, isPresented: $books.selectedBook)
+        .onAppear {
+            booksGetter.fetchBooks(query: "A") // Perform an initial fetch with a default or empty search query
         }
-        .background(Color.color1)
+        .onChange(of: searchText) { newValue in
+            booksGetter.fetchBooks(query: newValue) // Fetch books with the search query
+        }
     }
 }
-

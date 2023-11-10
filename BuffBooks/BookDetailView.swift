@@ -10,36 +10,50 @@ import SwiftyJSON
 import SDWebImageSwiftUI
 
 struct BookDetailView: View {
-    let book : Book
-    @Binding var isPresented: Book?
-    
+    @Binding var book: Book?
+   
     var body: some View {
-        ScrollView{
+        ScrollView {
             VStack(alignment: .center) {
-                if book.imurl != "" {
-                    WebImage(url: URL(string: book.imurl)!).resizable().frame(width: 120, height: 170).cornerRadius(10).padding()
+                // Safely unwrap `book` and provide a default value for `imurl` if `book` is `nil`
+                if book?.imurl != "" {
+                    // Safely unwrap the URL since `imurl` is not guaranteed to be a valid URL
+                    if let urlString = book?.imurl, let url = URL(string: urlString) {
+                        WebImage(url: url)
+                            .resizable()
+                            .frame(width: 120, height: 170)
+                            .cornerRadius(10)
+                            .padding()
+                    } else {
+                        Image("placeholder_book_image") // Replace with a placeholder image if URL is not valid
+                            .resizable()
+                            .frame(width: 120, height: 170)
+                            .cornerRadius(10)
+                            .padding()
+                    }
+                } else {
+                    Image("Book") // Default image when `imurl` is empty or `nil`
+                        .resizable()
+                        .frame(width: 120, height: 170)
+                        .cornerRadius(10)
+                        .padding()
                 }
-                else {
-                    Image("Book").resizable().frame(width: 120, height: 170).cornerRadius(10).padding()
-                }
+               
+                // Use optional chaining with default values for other properties
                 VStack(alignment: .center, spacing: 10) {
-                    Text(book.title).fontWeight(.bold)
-                    Text(book.authors)
-                    Text(book.desc).lineLimit(100).multilineTextAlignment(.leading)
+                    Text(book?.title ?? "Unknown Title").fontWeight(.bold)
+                    Text(book?.authors ?? "Unknown Authors")
+                    Text(book?.desc ?? "No Description Available").lineLimit(100).multilineTextAlignment(.leading)
                 }
+                .padding()
             }
         }
-        Button(action: {self.isPresented = nil}) {
-            HStack {
-                  Image(systemName: "xmark")
-                  Text("Dismiss")
-              }
-              .foregroundColor(.black)
-              //.background(Color.color2)
-              .cornerRadius(15)
-              //.frame(maxWidth: 400, maxHeight: 100)
-              .padding()
-            }
+       
+        Button("Close") {
+            self.book = nil // This sets the `@Binding var book` to `nil` to dismiss the sheet
         }
+        .foregroundColor(.black)
+        .cornerRadius(15)
+        .padding()
     }
-
+}

@@ -12,7 +12,7 @@ struct BuyView: View {
     @StateObject private var booksGetter = DataGetter()
     var body: some View {
         NavigationView {
-            ListView(books: booksGetter)
+            ListView()
                 //.navigationBarTitle("Buy")
                 .padding()
                 .background(Color.color1.edgesIgnoringSafeArea(.all))
