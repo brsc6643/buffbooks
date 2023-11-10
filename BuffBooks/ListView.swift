@@ -10,7 +10,7 @@ import SwiftyJSON
 import SDWebImageSwiftUI
 
 struct ListView : View {
-    @ObservedObject var books = DataGetter()
+    @ObservedObject var books : DataGetter
     
     var body: some View{
         List(books.data){ i in
@@ -22,18 +22,21 @@ struct ListView : View {
                     Image("Book").resizable().frame(width: 120, height: 170).cornerRadius(10)
                 }
                 VStack(alignment: .leading, spacing: 10) {
-                    
-                    Text(i.title).fontWeight(.bold)
-                    
-                    Text(i.authors)
-                    
-                    Text(i.desc).font(.caption).lineLimit(4).multilineTextAlignment(.leading)
+                    Button(action: {
+                        books.selectedBook = i
+                    }) {
+                        Text(i.title).fontWeight(.bold)
+                        Text(i.authors)
+                        Text(i.desc).font(.caption).lineLimit(4).multilineTextAlignment(.leading)
+                    }
                 }
-                Button(action: {
-                    
-                })
             }
         }
+        .sheet(item: $books.selectedBook, onDismiss: {})
+         { i in
+             BookDetailView(book: i, isPresented: $books.selectedBook)
+        }
+        .background(Color.color1)
     }
 }
 

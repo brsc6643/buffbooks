@@ -8,37 +8,44 @@
 import SwiftUI
 
 struct SearchView: View {
-    @Binding var books: [Book]
+    @ObservedObject var booksGetter = DataGetter()
     @State private var searchText = ""
-   
-    var filteredBooks: [Book] {
-        if searchText.isEmpty {
-            return books
-        } else {
-            return books.filter { book in
-                // You can customize the search criteria here.
-                let titleContains = book.title.localizedCaseInsensitiveContains(searchText)
-                let authorsContains = book.authors.localizedCaseInsensitiveContains(searchText)
-                return titleContains || authorsContains
+    @State private var selectedBook: Book?
+    
+    var body: some View {
+        VStack {
+            SearchBarView(text: $searchText, placeholder: "Search Books")
+            List(booksGetter.data) { book in
+                VStack(alignment: .leading, content: {
+                    Text("Title: \(book.title)")
+                    Text("Author: \(book.authors)")
+                })
             }
         }
-    }
-   
-    var body: some View {
-            VStack {
-                SearchBarView(text: $searchText, placeholder: "Search Books")
-               
-                List(filteredBooks) { book in
-                    NavigationLink(destination: BookDetailView(book: book)) {
-                        VStack(alignment: .leading) {
-                            Text("Title: \(book.title) \(book.authors)")
-                            Text("Author: \(book.authors)")
-                        }
-                    }
-                }
-            }
-            .navigationTitle("Search Books")
+        .onAppear {
+            self.booksGetter.fetchBooks(query: "College")
+        }
+        .onChange(of: searchText) { newValue in
+            self.booksGetter.fetchBooks(query: newValue)
+        }
+        .navigationTitle("Search")
     }
 }
+        
+//            VStack {
+//                SearchBarView(text: $searchText, placeholder: "Search Books")
+//               
+//                List(filteredBooks) { book in
+////                    NavigationLink(destination: BookDetailView(book: book, isPresented: $books.selectedBook)) {
+//                        VStack(alignment: .leading) {
+//                            Text("Title: \(book.title) \(book.authors)")
+//                            Text("Author: \(book.authors)")
+//                        //}
+//                    }
+//                }
+//            }
+//            .navigationTitle("Search Books")
+//}
+//}
 
 

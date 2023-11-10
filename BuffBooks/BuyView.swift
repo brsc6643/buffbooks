@@ -9,9 +9,10 @@ import SwiftUI
 
 
 struct BuyView: View {
+    @StateObject private var booksGetter = DataGetter()
     var body: some View {
         NavigationView {
-            ListView()
+            ListView(books: booksGetter)
                 //.navigationBarTitle("Buy")
                 .padding()
                 .background(Color.color1.edgesIgnoringSafeArea(.all))
@@ -25,7 +26,8 @@ struct BuyView: View {
                     .toolbarColorScheme(.dark, for: .navigationBar)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
-                            NavigationLink(destination: SearchView(books: $books, searchText: <#T##arg#>)
+                            NavigationLink(destination: SearchView(booksGetter: booksGetter)) {
+                                Image(systemName: "magnifyingglass")
                         }}
                     }
 
