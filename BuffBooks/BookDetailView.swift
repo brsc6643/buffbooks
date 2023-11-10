@@ -15,9 +15,8 @@ struct BookDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
-                // Safely unwrap `book` and provide a default value for `imurl` if `book` is `nil`
+                Spacer()
                 if book?.imurl != "" {
-                    // Safely unwrap the URL since `imurl` is not guaranteed to be a valid URL
                     if let urlString = book?.imurl, let url = URL(string: urlString) {
                         WebImage(url: url)
                             .resizable()
@@ -25,32 +24,32 @@ struct BookDetailView: View {
                             .cornerRadius(10)
                             .padding()
                     } else {
-                        Image("placeholder_book_image") // Replace with a placeholder image if URL is not valid
+                        Image("placeholder_book_image")
                             .resizable()
                             .frame(width: 120, height: 170)
                             .cornerRadius(10)
                             .padding()
                     }
                 } else {
-                    Image("Book") // Default image when `imurl` is empty or `nil`
+                    Image("Book")
                         .resizable()
                         .frame(width: 120, height: 170)
                         .cornerRadius(10)
                         .padding()
                 }
                
-                // Use optional chaining with default values for other properties
                 VStack(alignment: .center, spacing: 10) {
                     Text(book?.title ?? "Unknown Title").fontWeight(.bold)
                     Text(book?.authors ?? "Unknown Authors")
-                    Text(book?.desc ?? "No Description Available").lineLimit(100).multilineTextAlignment(.leading)
+                    Text(book?.desc ?? "No Description Available").lineLimit(200).multilineTextAlignment(.leading)
+                    Spacer()
                 }
                 .padding()
             }
         }
        
         Button("Close") {
-            self.book = nil // This sets the `@Binding var book` to `nil` to dismiss the sheet
+            self.book = nil 
         }
         .foregroundColor(.black)
         .cornerRadius(15)

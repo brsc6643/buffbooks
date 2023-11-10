@@ -31,21 +31,3 @@ struct SearchView: View {
         .navigationTitle("Search")
     }
 }
-        
-//            VStack {
-//                SearchBarView(text: $searchText, placeholder: "Search Books")
-//               
-//                List(filteredBooks) { book in
-////                    NavigationLink(destination: BookDetailView(book: book, isPresented: $books.selectedBook)) {
-//                        VStack(alignment: .leading) {
-//                            Text("Title: \(book.title) \(book.authors)")
-//                            Text("Author: \(book.authors)")
-//                        //}
-//                    }
-//                }
-//            }
-//            .navigationTitle("Search Books")
-//}
-//}
-
-
