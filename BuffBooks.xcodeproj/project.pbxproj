@@ -24,6 +24,7 @@
 		2A904B472AF4201300C19977 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A904B462AF4201300C19977 /* DataGetter.swift */; };
 		2A904B4A2AF4228500C19977 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2A904B492AF4228500C19977 /* SwiftyJSON */; };
 		2A904B4D2AF423D300C19977 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2A904B4C2AF423D300C19977 /* SDWebImageSwiftUI */; };
+		2A927C332B06B4B2008AB56D /* SellFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A927C322B06B4B1008AB56D /* SellFormView.swift */; };
 		2A96C16D2AFC21750025E75D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96C16C2AFC21750025E75D /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		2A9049582AF9964C0020EBFC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		2A904B462AF4201300C19977 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		2A904B4E2AF4358900C19977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2A927C322B06B4B1008AB56D /* SellFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellFormView.swift; sourceTree = "<group>"; };
 		2A96C16C2AFC21750025E75D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			children = (
 				2A904B4E2AF4358900C19977 /* Info.plist */,
 				2A8BC5292AEB087900E9C638 /* BuyView.swift */,
+				2A927C322B06B4B1008AB56D /* SellFormView.swift */,
 				2A9049582AF9964C0020EBFC /* ListView.swift */,
 				2A8BC4F92AEAD96300E9C638 /* BuffBooksApp.swift */,
 				2A8BC4FB2AEAD96300E9C638 /* ContentView.swift */,
@@ -308,6 +311,7 @@
 				2A96C16D2AFC21750025E75D /* SearchBarView.swift in Sources */,
 				2A8E73232AFD6BAF00D3DD8B /* SearchView.swift in Sources */,
 				2A8BC4FC2AEAD96300E9C638 /* ContentView.swift in Sources */,
+				2A927C332B06B4B2008AB56D /* SellFormView.swift in Sources */,
 				2A8BC4FA2AEAD96300E9C638 /* BuffBooksApp.swift in Sources */,
 				2A8E73252AFD6BCC00D3DD8B /* UserModel.swift in Sources */,
 				2A8BC52A2AEB087900E9C638 /* BuyView.swift in Sources */,

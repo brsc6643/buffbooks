@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email: String = ""
+    @State public var email: String = ""
     @State private var password: String = ""
     @State private var invalidAlert : Bool = false
     @State var navigated = false
@@ -43,7 +43,8 @@ struct LoginView: View {
                     if !email.hasSuffix("@colorado.edu") || password == "" {
                         invalidAlert = true
                     }
-                    else {self.navigated.toggle()}
+                    else {
+                        self.navigated.toggle()}
                 }) {
                     Text("Login with Email")
                         .foregroundColor(Color.white)
