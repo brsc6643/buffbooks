@@ -12,6 +12,7 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var invalidAlert : Bool = false
     @State var navigated = false
+    @State var isSignedIn: Bool = false
     
     var body: some View {
         NavigationStack{
@@ -44,7 +45,9 @@ struct LoginView: View {
                         invalidAlert = true
                     }
                     else {
-                        self.navigated.toggle()}
+                        self.navigated.toggle()
+                        isSignedIn = true
+                    }
                 }) {
                     Text("Login with Email")
                         .foregroundColor(Color.white)
@@ -71,7 +74,9 @@ struct LoginView: View {
             }
             .padding()
             .background(Color.color1.edgesIgnoringSafeArea(.all))
-        }.navigationTitle("Login") //end nav stack
+        }
+        .navigationTitle("Login") //end nav stack
+        .navigationBarBackButtonHidden(true)
     }
 }
 

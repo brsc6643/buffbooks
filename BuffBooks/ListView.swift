@@ -48,6 +48,7 @@ struct ListView: View {
                 BookDetailView(book: $booksGetter.selectedBook)
             }
         }
+        .navigationBarBackButtonHidden(true)
         .onAppear {
             booksGetter.fetchBooks(query: "A") // Perform an initial fetch with a default or empty search query
         }

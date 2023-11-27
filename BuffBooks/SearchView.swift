@@ -29,5 +29,6 @@ struct SearchView: View {
             self.booksGetter.fetchBooks(query: newValue)
         }
         .navigationTitle("Search")
+        .navigationBarBackButtonHidden(true)
     }
 }

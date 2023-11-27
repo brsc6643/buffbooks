@@ -17,51 +17,61 @@ struct SellFormView: View {
     @Binding var isForSale: Bool
  
     var body: some View {
-        VStack {
-            Spacer()
-           
+        NavigationView {
             VStack {
+                Spacer()
                 
-                TextField("Name (optional)", text: $name)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .multilineTextAlignment(.center)
-                    .keyboardType(.decimalPad)
-                
-                TextField("Email/Phone Number", text: $contactInfo)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .multilineTextAlignment(.center)
-                    .keyboardType(.decimalPad)
-                
-                TextField("Price (USD)", text: $price)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .multilineTextAlignment(.center)
-                    .keyboardType(.decimalPad)
- 
-                TextField("Condition/Notes", text: $condition)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .multilineTextAlignment(.center)
- 
-                Button("Submit") {
-                    UserDefaults.standard.set(["name": name, "contactInfo": contactInfo, "price": price, "condition": condition], forKey: "saleInfo_\(bookId)")
-                    isForSale = true
-                    presentationMode.wrappedValue.dismiss()
+                VStack {
+                    
+                    TextField("Name (optional)", text: $name)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .multilineTextAlignment(.center)
+                        .keyboardType(.decimalPad)
+                    
+                    TextField("Email/Phone Number", text: $contactInfo)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .multilineTextAlignment(.center)
+                        .keyboardType(.decimalPad)
+                    
+                    TextField("Price (USD)", text: $price)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .multilineTextAlignment(.center)
+                        .keyboardType(.decimalPad)
+                    
+                    TextField("Condition/Notes", text: $condition)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .multilineTextAlignment(.center)
+                    
+                    Button("Submit") {
+                        UserDefaults.standard.set(["name": name, "contactInfo": contactInfo, "price": price, "condition": condition], forKey: "saleInfo_\(bookId)")
+                        isForSale = true
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                    .padding()
+                    .foregroundColor(.color1)
+                    .font(.headline)
+                    .shadow(radius: 5)
+                    .background(Color.color2)
+                    .cornerRadius(15)
+                    .padding(.horizontal)
+                    
+                    Button("Close") {
+                        presentationMode.wrappedValue.dismiss()
+                    }
                 }
-                .padding()
-                .foregroundColor(.color1)
-                .font(.headline)
-                .shadow(radius: 5)
-                .background(Color.color2)
-                .cornerRadius(15)
-                .padding(.horizontal)
+                .frame(maxWidth: .infinity)
                 
-                Button("Close") {
-                    presentationMode.wrappedValue.dismiss()
-                }
+                Spacer()
             }
-            .frame(maxWidth: .infinity)
-           
-            Spacer()
+            .padding()
         }
-        .padding()
+        .navigationBarBackButtonHidden(true)
+        .navigationTitle("Sell")
+        .toolbarBackground(
+            Color.color2,
+            for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .toolbarColorScheme(.dark, for: .navigationBar)
     }
 }
+
