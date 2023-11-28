@@ -10,21 +10,18 @@ import SwiftyJSON
 import SDWebImageSwiftUI
 
 struct BookDetailView: View {
-    @Binding var book: Book?
+    //@Binding var book: Book?
+    @Environment(\.presentationMode) var presentationMode
     
-    @State private var showingSellSheet = false
-    @State private var isForSale = false
-    @State private var saleName = ""
-    @State private var saleContactInfo = ""
-    @State private var salePrice = ""
-    @State private var saleCondition = ""
+    @StateObject var sellerModel: SellerModel
+
      
         var body: some View {
                 ScrollView {
                     VStack(alignment: .center) {
                         Spacer()
-                        if book?.imurl != "" {
-                            if let urlString = book?.imurl, let url = URL(string: urlString) {
+                        if sellerModel.book?.imurl != "" {
+                            if let urlString = sellerModel.book?.imurl, let url = URL(string: urlString) {
                                 WebImage(url: url)
                                     .resizable()
                                     .frame(width: 120, height: 170)
@@ -46,32 +43,30 @@ struct BookDetailView: View {
                         }
                        
                         VStack(alignment: .center, spacing: 10) {
-                            Text(book?.title ?? "Unknown Title").fontWeight(.bold)
-                            Text(book?.authors ?? "Unknown Authors")
-                            Text(book?.desc ?? "No Description Available").lineLimit(200).multilineTextAlignment(.leading)
+                            Text(sellerModel.book?.title ?? "Unknown Title").fontWeight(.bold)
+                            Text(sellerModel.book?.authors ?? "Unknown Authors")
+                            Text(sellerModel.book?.desc ?? "No Description Available").lineLimit(200).multilineTextAlignment(.leading)
                             Spacer()
                         }
                         .padding()
                         
-                        if isForSale {
+                        if sellerModel.isForSale {
                             VStack {
-                                if (saleName != "") {
-                                    HStack {
-                                        Text("For sale by")
-                                        Text(saleName)
-                                    }
+                                HStack {
+                                    Text("For sale by:")
+                                    Text("\(sellerModel.sellerName)")
                                 }
                                 HStack {
-                                    Text("Contact")
-                                    Text(saleContactInfo)
+                                    Text("Contact:")
+                                    Text("\(sellerModel.sellerContact)")
                                 }
                                 HStack {
                                     Text("Price:")
-                                    Text("$\(salePrice)")
+                                    Text("$\(sellerModel.salePrice)")
                                 }
                                 HStack {
                                     Text("Condition:")
-                                    Text(saleCondition)
+                                    Text(sellerModel.saleCondition)
                                 }
                             }
                         }
@@ -82,7 +77,7 @@ struct BookDetailView: View {
                                 .padding()
                         }
                         Button("Sell") {
-                            showingSellSheet = true
+                            sellerModel.showingSellSheet = true
                         }
                         .padding()
                         .foregroundColor(.color1)
@@ -92,19 +87,12 @@ struct BookDetailView: View {
                         .cornerRadius(15)
                         .padding(.horizontal)
                     } //end vstack
-                    .sheet(isPresented: $showingSellSheet) {
-                        SellFormView(bookId: book?.id ?? "", name: $saleName, contactInfo : $saleContactInfo, price: $salePrice, condition: $saleCondition, isForSale: $isForSale)
+                    .sheet(isPresented: $sellerModel.showingSellSheet) {
+                        SellFormView(sellerModel: sellerModel)
                     }
-                    .onAppear {
-                        if let bookId = book?.id, let saleInfo = UserDefaults.standard.dictionary(forKey: "saleInfo_\(bookId)") as? [String: String] {
-                            self.isForSale = true
-                            self.salePrice = saleInfo["price"] ?? ""
-                            self.saleCondition = saleInfo["condition"] ?? ""
-                        }
-                }
-               
+
                 Button("Close") {
-                    self.book = nil
+                    presentationMode.wrappedValue.dismiss()
                 }
                 .foregroundColor(.black)
                 .cornerRadius(15)

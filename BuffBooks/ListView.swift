@@ -45,7 +45,8 @@ struct ListView: View {
                 .listStyle(PlainListStyle())
             }
             .sheet(item: $booksGetter.selectedBook) { book in
-                BookDetailView(book: $booksGetter.selectedBook)
+                let sellerModel = SellerModel(book: book)
+                BookDetailView(sellerModel: sellerModel)
             }
         }
         .navigationBarBackButtonHidden(true)

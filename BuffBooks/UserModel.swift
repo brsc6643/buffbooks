@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct User {
-    var email:String
+    var email: String
     var password: String
     
 //    init(email: String = "", password: String = "") {
