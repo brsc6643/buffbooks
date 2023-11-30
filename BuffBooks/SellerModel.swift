@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 class SellerModel : ObservableObject {
     @Published var isForSale = false
     @Published var sellerName = ""

@@ -14,6 +14,7 @@ struct BookDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @StateObject var sellerModel: SellerModel
+    var id: String
 
      
         var body: some View {
@@ -50,35 +51,47 @@ struct BookDetailView: View {
                         }
                         .padding()
                         
-                        if sellerModel.isForSale {
-                            VStack {
-                                HStack {
-                                    Text("For sale by:")
-                                    Text("\(sellerModel.sellerName)")
-                                }
-                                HStack {
-                                    Text("Contact:")
-                                    Text("\(sellerModel.sellerContact)")
-                                }
-                                HStack {
-                                    Text("Price:")
-                                    Text("$\(sellerModel.salePrice)")
-                                }
-                                HStack {
-                                    Text("Condition:")
-                                    Text(sellerModel.saleCondition)
-                                }
+//                        if sellerModel.isForSale {
+//                            VStack {
+//                                HStack {
+//                                    Text("For sale by:")
+//                                    Text("\(sellerModel.sellerName)")
+//                                }
+//                                HStack {
+//                                    Text("Contact:")
+//                                    Text("\(sellerModel.sellerContact)")
+//                                }
+//                                HStack {
+//                                    Text("Price:")
+//                                    Text("$\(sellerModel.salePrice)")
+//                                }
+//                                HStack {
+//                                    Text("Condition:")
+//                                    Text(sellerModel.saleCondition)
+//                                }
+//                            }
+//                        }
+                        
+                        let bookSaleInfo = getBookSaleInfo(forBookId: id)
+                        
+                        List(bookSaleInfo.sellers, id: \.self) { seller in
+                            VStack(alignment: .leading) {
+                                Text("For sale by: \(seller.sellerName)")
+                                Text("Contact: \(seller.sellerContact)")
+                                Text("Price: $\(seller.price)")
+                                Text("Condition: \(seller.condition)")
                             }
                         }
-                        else {
-                            Text("Uh oh! It looks like nobody is selling this book right now. If you have this book for sale, press the button below.")
-                                .font(.headline)
-                                .multilineTextAlignment(.leading)
-                                .padding()
-                        }
+//                        else {
+//                            Text("Uh oh! It looks like nobody is selling this book right now. If you have this book for sale, press the button below.")
+//                                .font(.headline)
+//                                .multilineTextAlignment(.leading)
+//                                .padding()
+//                        }
                         Button("Sell") {
                             sellerModel.showingSellSheet = true
                         }
+                        .padding()
                         .padding()
                         .foregroundColor(.color1)
                         .font(.headline)
@@ -96,6 +109,7 @@ struct BookDetailView: View {
                 }
                 .foregroundColor(.black)
                 .cornerRadius(15)
+                .padding()
                 .padding()
             }
         }

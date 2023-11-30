@@ -48,7 +48,7 @@ class DataGetter: ObservableObject {
  
                         return Book(id: id, title: title, authors: author, desc: description, imurl: imurl, url: webReaderLink)
                     }
-                }
+                } 
             } catch {
                 print(error.localizedDescription)
             }

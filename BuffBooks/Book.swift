@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Book : Identifiable {
+class Book : Identifiable, Codable {
     var id : String
     var title: String
     var authors: String
