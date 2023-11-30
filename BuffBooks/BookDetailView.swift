@@ -15,42 +15,42 @@ struct BookDetailView: View {
     
     @StateObject var sellerModel: SellerModel
     var id: String
-
-     
-        var body: some View {
-                ScrollView {
-                    VStack(alignment: .center) {
-                        Spacer()
-                        if sellerModel.book?.imurl != "" {
-                            if let urlString = sellerModel.book?.imurl, let url = URL(string: urlString) {
-                                WebImage(url: url)
-                                    .resizable()
-                                    .frame(width: 120, height: 170)
-                                    .cornerRadius(10)
-                                    .padding()
-                            } else {
-                                Image("placeholder_book_image")
-                                    .resizable()
-                                    .frame(width: 120, height: 170)
-                                    .cornerRadius(10)
-                                    .padding()
-                            }
+    var dataGetter: DataGetter
+    
+    var body: some View {
+            ScrollView {
+                VStack(alignment: .center) {
+                    Spacer()
+                    if sellerModel.book?.imurl != "" {
+                        if let urlString = sellerModel.book?.imurl, let url = URL(string: urlString) {
+                            WebImage(url: url)
+                                .resizable()
+                                .frame(width: 120, height: 170)
+                                .cornerRadius(10)
+                                .padding()
                         } else {
-                            Image("Book")
+                            Image("placeholder_book_image")
                                 .resizable()
                                 .frame(width: 120, height: 170)
                                 .cornerRadius(10)
                                 .padding()
                         }
-                       
-                        VStack(alignment: .center, spacing: 10) {
-                            Text(sellerModel.book?.title ?? "Unknown Title").fontWeight(.bold)
-                            Text(sellerModel.book?.authors ?? "Unknown Authors")
-                            Text(sellerModel.book?.desc ?? "No Description Available").lineLimit(200).multilineTextAlignment(.leading)
-                            Spacer()
-                        }
-                        .padding()
-                        
+                    } else {
+                        Image("Book")
+                            .resizable()
+                            .frame(width: 120, height: 170)
+                            .cornerRadius(10)
+                            .padding()
+                    }
+                   
+                    VStack(alignment: .center, spacing: 10) {
+                        Text(sellerModel.book?.title ?? "Unknown Title").fontWeight(.bold)
+                        Text(sellerModel.book?.authors ?? "Unknown Authors")
+                        Text(sellerModel.book?.desc ?? "No Description Available").lineLimit(200).multilineTextAlignment(.leading)
+                        Spacer()
+                    }
+                    .padding()
+                    
 //                        if sellerModel.isForSale {
 //                            VStack {
 //                                HStack {
@@ -71,16 +71,35 @@ struct BookDetailView: View {
 //                                }
 //                            }
 //                        }
-                        
-                        let bookSaleInfo = getBookSaleInfo(forBookId: id)
-                        
-                        List(bookSaleInfo.sellers, id: \.self) { seller in
-                            VStack(alignment: .leading) {
+                
+                    let bookSaleInfo = getBookSaleInfo(forBookId: id)
+                    if bookSaleInfo.sellers.isEmpty {
+                        Text("There are currently no students offering this book for sale. Check again later.")
+                            .frame(alignment: .center)
+                            .multilineTextAlignment(.center)
+                        Text("If you would like to make a listing for this book, press \"Sell\" below.")
+                            .padding()
+                            .frame(alignment: .center)
+                            .multilineTextAlignment(.center)
+
+                    }
+                    else {
+                        if (bookSaleInfo.sellers.count == 1) { Text("This book currently has 1 listing:").padding()}
+                        else{
+                            Text("This book currently has \(bookSaleInfo.sellers.count) listings:").padding()
+                        }
+                    }
+                        ForEach(bookSaleInfo.sellers, id: \.self) { seller in
+                            VStack(alignment: .center) {
                                 Text("For sale by: \(seller.sellerName)")
-                                Text("Contact: \(seller.sellerContact)")
+                                HStack{
+                                    Text("Contact:")
+                                    contactLink(seller.sellerContact)
+                                }
                                 Text("Price: $\(seller.price)")
                                 Text("Condition: \(seller.condition)")
                             }
+                            .padding()
                         }
 //                        else {
 //                            Text("Uh oh! It looks like nobody is selling this book right now. If you have this book for sale, press the button below.")
@@ -88,29 +107,49 @@ struct BookDetailView: View {
 //                                .multilineTextAlignment(.leading)
 //                                .padding()
 //                        }
-                        Button("Sell") {
-                            sellerModel.showingSellSheet = true
-                        }
-                        .padding()
-                        .padding()
-                        .foregroundColor(.color1)
-                        .font(.headline)
-                        .shadow(radius: 5)
-                        .background(Color.color2)
-                        .cornerRadius(15)
-                        .padding(.horizontal)
-                    } //end vstack
-                    .sheet(isPresented: $sellerModel.showingSellSheet) {
-                        SellFormView(sellerModel: sellerModel)
+                    Button("Sell") {
+                        sellerModel.showingSellSheet = true
                     }
-
-                Button("Close") {
-                    presentationMode.wrappedValue.dismiss()
+                    .padding()
+                    .foregroundColor(.color1)
+                    .font(.headline)
+                    .shadow(radius: 5)
+                    .background(Color.color2)
+                    .cornerRadius(15)
+                    .padding(.horizontal)
+                } //end vstack
+                .sheet(isPresented: $sellerModel.showingSellSheet) {
+                    SellFormView(sellerModel: sellerModel, dataGetter: dataGetter, id: id)
                 }
-                .foregroundColor(.black)
-                .cornerRadius(15)
-                .padding()
-                .padding()
+
+            Button("Close") {
+                presentationMode.wrappedValue.dismiss()
+            }
+            .foregroundColor(.black)
+            .cornerRadius(15)
+            .padding()
+            .padding()
+        }
+    }
+    
+    @ViewBuilder
+    private func contactLink(_ contact: String) -> some View {
+        if contact.contains("@") {
+            if let url = URL(string: "mailto:\(contact.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")"),
+               UIApplication.shared.canOpenURL(url) {
+                Link(contact, destination: url)
+            } else{
+                Text(contact)
+            }
+        } else {
+            Button(contact) {
+                if let url = URL(string: "sms://\(contact)"), UIApplication.shared.canOpenURL(url) {
+                    Link(contact, destination: url)
+                }
+                else {
+                    Text(contact)
+                }
             }
         }
     }
+}

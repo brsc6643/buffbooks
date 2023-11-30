@@ -9,9 +9,11 @@ import SwiftUI
 
 struct SellFormView: View {
     @Environment(\.presentationMode) var presentationMode
-    //var bookId: String
     
     @ObservedObject var sellerModel: SellerModel
+    
+    var dataGetter: DataGetter
+    var id: String
     
     @State private var tempName: String = ""
     @State private var tempContact: String = ""
@@ -19,15 +21,15 @@ struct SellFormView: View {
     @State private var tempCondition: String = ""
  
     
-    init(sellerModel: SellerModel) {
-        self.sellerModel = sellerModel
-        // Initialize temporary variables with current values
-        _tempName = State(initialValue: sellerModel.sellerName)
-        _tempContact = State(initialValue: sellerModel.sellerContact)
-        _tempPrice = State(initialValue: sellerModel.salePrice)
-        _tempCondition = State(initialValue: sellerModel.saleCondition)
-    }
-    
+//    init(sellerModel: SellerModel) {
+//        self.sellerModel = sellerModel
+//        // Initialize temporary variables with current values
+//        _tempName = State(initialValue: sellerModel.sellerName)
+//        _tempContact = State(initialValue: sellerModel.sellerContact)
+//        _tempPrice = State(initialValue: sellerModel.salePrice)
+//        _tempCondition = State(initialValue: sellerModel.saleCondition)
+//    }
+//    
     var body: some View {
         NavigationView {
             VStack {
@@ -44,19 +46,25 @@ struct SellFormView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .multilineTextAlignment(.center)
                         .keyboardType(.decimalPad)
-                    
+
                     TextField("Price (USD)", text: $tempPrice)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .multilineTextAlignment(.center)
                         .keyboardType(.decimalPad)
-                    
+
                     TextField("Condition/Notes", text: $tempCondition)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .multilineTextAlignment(.center)
-                    
+                        .padding(.bottom)
+
                     Button("Submit") {
+                        let newSellerInfo = SellerInfo(sellerName: tempName, sellerContact: tempContact, price: tempPrice, condition: tempCondition)
+                        
+                        dataGetter.saveSellerInfo(forBookId: id, sellerInfo: newSellerInfo)
+                        
                         sellerModel.markAsForSale(name: tempName, contact: tempContact, price: tempPrice, condition: tempCondition)
                         sellerModel.showingSellSheet = false
+                        BookDetailView(sellerModel: sellerModel, id: id, dataGetter: dataGetter)
                     }
                     .padding()
                     .foregroundColor(.color1)
@@ -69,6 +77,7 @@ struct SellFormView: View {
                     Button("Close") {
                         presentationMode.wrappedValue.dismiss()
                     }
+                    .padding()
                 }
                 .frame(maxWidth: .infinity)
                 

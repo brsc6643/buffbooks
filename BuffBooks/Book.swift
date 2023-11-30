@@ -14,4 +14,14 @@ class Book : Identifiable, Codable {
     var desc: String
     var imurl: String
     var url: String
+    
+    
+    init(id: String, title: String, authors: String, desc: String, imurl: String, url: String) {
+        self.id = id
+        self.title = title
+        self.authors = authors
+        self.desc = desc
+        self.imurl = imurl
+        self.url = url
+    }
 }

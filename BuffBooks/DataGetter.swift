@@ -12,6 +12,7 @@ import SDWebImageSwiftUI
 class DataGetter: ObservableObject {
     @Published var data = [Book]()
     @Published var selectedBook: Book?
+    
  
     // Fetch books with a specified query
     func fetchBooks(query: String) {
@@ -54,8 +55,28 @@ class DataGetter: ObservableObject {
             }
         }.resume()
     }
+    
+    func saveSellerInfo(forBookId id: String, sellerInfo: SellerInfo) {
+        var bookSaleInfo = getBookSaleInfo(forBookId: id)
+        
+        bookSaleInfo.sellers.append(sellerInfo)
+        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(bookSaleInfo) {
+            UserDefaults.standard.set(encoded, forKey: "BookSaleInfo_\(id)")
+        }
+    }
+    
+    func resetUserDefaults() {
+        if let bundleID = Bundle.main.bundleIdentifier {
+            UserDefaults.standard.removePersistentDomain(forName: bundleID)
+            UserDefaults.standard.synchronize()
+        }
+    }
  
     init() {
         fetchBooks(query: "College") // Initial fetch with a default search query
+        //uncomment the below line to reset listing storage
+        //resetUserDefaults()
     }
 }

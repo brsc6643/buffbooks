@@ -12,9 +12,11 @@ struct BuyView: View {
     @StateObject private var booksGetter = DataGetter()
     @State private var showingLogoutAlert = false
     @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView {
             ListView()
+            
                 //.navigationBarTitle("Buy")
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(trailing: Button(action: {

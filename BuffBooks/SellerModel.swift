@@ -8,7 +8,7 @@
 import SwiftUI
 
 class SellerModel : ObservableObject {
-    @Published var isForSale = false
+    //@Published var isForSale = false
     @Published var sellerName = ""
     @Published var sellerContact = ""
     @Published var salePrice = ""
@@ -24,7 +24,7 @@ class SellerModel : ObservableObject {
     func loadSaleInfo() {
         guard let bookId = book?.id else { return }
         if let saleInfo = UserDefaults.standard.dictionary(forKey: "saleInfo_\(bookId)") as? [String: String] {
-            self.isForSale = true
+            //self.isForSale = true
             self.sellerName = saleInfo["name"] ?? ""
             self.sellerContact = saleInfo["contact"] ?? ""
             self.salePrice = saleInfo["price"] ?? ""
@@ -36,7 +36,7 @@ class SellerModel : ObservableObject {
         guard let bookId = book?.id else { return }
         let saleInfo = ["name": name, "contact": contact, "price": price, "condition": condition]
         UserDefaults.standard.set(["name": name, "contact": contact, "price": price, "condition": condition], forKey: "saleInfo_\(bookId)")
-        self.isForSale = true
+        //self.isForSale = true
         self.sellerName = name
         self.sellerContact = contact
         self.salePrice = price
