@@ -37,7 +37,7 @@ struct LoginView: View {
                     .cornerRadius(8)
                     .shadow(radius:3)
                 
-                NavigationLink("", destination: BuyView(), isActive: $navigated)
+                NavigationLink("", destination: HomeView(), isActive: $navigated)
                 
                 
                 Button(action: {

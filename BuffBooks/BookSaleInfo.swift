@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BookSaleInfo: Codable {
+struct BookSaleInfo: Codable, Hashable {
     var id: String
     var sellers: [SellerInfo]
 }
