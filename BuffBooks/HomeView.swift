@@ -17,17 +17,21 @@ struct HomeView: View {
     }
     
     var body: some View {
-        TabView {
-            BuyView()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
- 
-            MyListingsView()
-                .tabItem {
-                    Label("My Listings", systemImage: "list.bullet")
-                }
-        }
+        //NavigationView {
+            TabView {
+                BuyView()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                
+                MyListingsView()
+                    .tabItem {
+                        Label("My Listings", systemImage: "list.bullet")
+                    }
+            }
+            .navigationBarBackButtonHidden(true)
+        //}
+        //.navigationBarBackButtonHidden(true)
     }
 }
 

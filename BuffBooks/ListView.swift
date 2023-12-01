@@ -51,7 +51,7 @@ struct ListView: View {
         }
         .navigationBarBackButtonHidden(true)
         .onAppear {
-            booksGetter.fetchBooks(query: "A") // Perform an initial fetch with a default or empty search query
+            booksGetter.fetchBooks(query: searchText) // Perform an initial fetch with a default or empty search query
         }
         .onChange(of: searchText) { newValue in
             booksGetter.fetchBooks(query: newValue) // Fetch books with the search query
