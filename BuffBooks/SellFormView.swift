@@ -40,12 +40,10 @@ struct SellFormView: View {
                     TextField("Name", text: $tempName)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .multilineTextAlignment(.center)
-                        .keyboardType(.decimalPad)
                     
                     TextField("Email/Phone Number", text: $tempContact)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .multilineTextAlignment(.center)
-                        .keyboardType(.decimalPad)
 
                     TextField("Price (USD)", text: $tempPrice)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
