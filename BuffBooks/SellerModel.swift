@@ -14,6 +14,7 @@ class SellerModel : ObservableObject {
     @Published var salePrice = ""
     @Published var saleCondition = ""
     @Published var showingSellSheet = false
+    @Published var sellerUsername = ""
     var book: Book?
     
     init(book: Book?) {
@@ -29,6 +30,7 @@ class SellerModel : ObservableObject {
             self.sellerContact = saleInfo["contact"] ?? ""
             self.salePrice = saleInfo["price"] ?? ""
             self.saleCondition = saleInfo["condition"] ?? ""
+            self.sellerUsername = saleInfo["username"] ?? "guest"
         }
     }
  
@@ -41,6 +43,8 @@ class SellerModel : ObservableObject {
         self.sellerContact = contact
         self.salePrice = price
         self.saleCondition = condition
+        self.sellerUsername = UserDefaults.standard.string(forKey: "currentUserEmail") ?? "guest"
+        book?.submittedBy = sellerUsername
     }
     
 }

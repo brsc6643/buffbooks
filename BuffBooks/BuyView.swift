@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct BuyView: View {
-    @StateObject private var booksGetter = DataGetter()
+    @StateObject var booksGetter : DataGetter
     @State private var showingLogoutAlert = false
     @Environment(\.presentationMode) var presentationMode
     
@@ -19,13 +19,24 @@ struct BuyView: View {
             
                 //.navigationBarTitle("Buy")
                 .navigationBarBackButtonHidden(true)
-                .navigationBarItems(trailing: Button(action: {
-                    showingLogoutAlert = true
-                }) {
-                    Text("Sign Out")
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                )
+                //.navigationBarItems(trailing: Button(action: {
+//                    showingLogoutAlert = true
+//                }) {
+//                    Text("Sign Out")
+//                    }
+//                    .buttonStyle(PlainButtonStyle())
+//                )
+                .navigationBarItems(trailing: Text("Sign Out")
+                    .foregroundColor(Color.color2)
+                    .onTapGesture(perform: {showingLogoutAlert = true})
+                                    )
+//                .toolbar {
+//                    ToolbarItem(placement: .navigationBarTrailing) {
+//                        Text("Sign Out")
+//                            .foregroundColor(Color.color3)
+//                            .onTapGesture(perform: {showingLogoutAlert = true})
+//                    }
+                //}
                 .alert(isPresented: $showingLogoutAlert) {
                     Alert(
                         title: Text("Sign Out"),
@@ -51,8 +62,3 @@ struct BuyView: View {
 }
 
 
-struct BuyView_Previews: PreviewProvider {
-    static var previews: some View {
-        BuyView()
-    }
-}

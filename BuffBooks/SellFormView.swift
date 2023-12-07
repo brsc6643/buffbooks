@@ -61,8 +61,11 @@ struct SellFormView: View {
                         dataGetter.saveSellerInfo(forBookId: id, sellerInfo: newSellerInfo)
                         
                         sellerModel.markAsForSale(name: tempName, contact: tempContact, price: tempPrice, condition: tempCondition)
+                        
+                        
                         sellerModel.showingSellSheet = false
                         BookDetailView(sellerModel: sellerModel, id: id, dataGetter: dataGetter)
+                        
                     }
                     .padding()
                     .foregroundColor(.color1)

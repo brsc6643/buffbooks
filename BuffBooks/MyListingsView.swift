@@ -16,20 +16,18 @@ struct MyListingsView: View {
 //        UITabBar.appearance().unselectedItemTintColor = .gray
 //    }
 //    
-    @StateObject var dataGetter = DataGetter()
-    @State var myListings: [BookSaleInfo] = []
+    @StateObject var dataGetter : DataGetter
+    //@State var myListings: [BookSaleInfo] = []
  
     var body: some View {
         NavigationView {
-            List {
-                ForEach(myListings, id: \.self) { listing in
-                    VStack(alignment: .leading) {
-                        Text(listing.id)  // Display book identifier or title
-                        // Display other relevant info
-                    }
+            List(dataGetter.myListings) { book in
+                VStack(alignment: .leading){
+                    Text(book.title)
+                    Text(book.authors)
                     .swipeActions {
                         Button(role: .destructive) {
-                            deleteListing(listing)
+                            dataGetter.deleteListing(bookToDelete: book)
                         } label: {
                             Label("Delete", systemImage: "trash")
                         }
@@ -39,17 +37,7 @@ struct MyListingsView: View {
             .navigationTitle("My Listings")
         }
         .onAppear {
-            loadMyListings()
+            dataGetter.loadMyListings()
         }
-    }
- 
-    func loadMyListings() {
-        // Load listings from UserDefaults
-        // This is a simplified version. You'll need to implement logic
-        // to fetch only the listings made by the current user
-    }
- 
-    func deleteListing(_ listing: BookSaleInfo) {
-        // Delete the listing from UserDefaults and update myListings
     }
 }

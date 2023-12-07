@@ -16,17 +16,21 @@ struct HomeView: View {
         UITabBar.appearance().unselectedItemTintColor = .gray
     }
     
+    @StateObject var dataGetter = DataGetter()
+    @State private var resetKey = UUID()
     var body: some View {
         //NavigationView {
             TabView {
-                BuyView()
+                BuyView(booksGetter: dataGetter)
                     .tabItem {
                         Label("Home", systemImage: "house")
+                            .id(resetKey)
                     }
                 
-                MyListingsView()
+                MyListingsView(dataGetter: dataGetter)
                     .tabItem {
                         Label("My Listings", systemImage: "list.bullet")
+                            .onTapGesture{ resetKey = UUID() }
                     }
             }
             .navigationBarBackButtonHidden(true)

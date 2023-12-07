@@ -13,6 +13,7 @@ struct LoginView: View {
     @State private var invalidAlert : Bool = false
     @State var navigated = false
     @State var isSignedIn: Bool = false
+    //@State var username : String = ""
     
     var body: some View {
         NavigationStack{
@@ -47,6 +48,7 @@ struct LoginView: View {
                     else {
                         self.navigated.toggle()
                         isSignedIn = true
+                        UserDefaults.standard.set(email, forKey: "currentUserEmail")
                     }
                 }) {
                     Text("Login with Email")
@@ -63,7 +65,9 @@ struct LoginView: View {
                 
                 
                 
-                Button(action: {self.navigated.toggle()}) {
+                Button(action: {
+                    self.navigated.toggle()
+                    UserDefaults.standard.set("guest", forKey: "currentUserEmail")}) {
                     Text("Login as Guest")
                         .padding()
                         .foregroundColor(Color.white)
@@ -79,8 +83,6 @@ struct LoginView: View {
         .navigationBarBackButtonHidden(true)
     }
 }
-
-
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {

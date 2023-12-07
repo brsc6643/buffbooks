@@ -14,6 +14,7 @@ class Book : Identifiable, Codable {
     var desc: String
     var imurl: String
     var url: String
+    var submittedBy: String
     
     
     init(id: String, title: String, authors: String, desc: String, imurl: String, url: String) {
@@ -23,5 +24,7 @@ class Book : Identifiable, Codable {
         self.desc = desc
         self.imurl = imurl
         self.url = url
+        self.submittedBy = ""
     }
 }
+

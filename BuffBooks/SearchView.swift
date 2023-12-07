@@ -23,7 +23,7 @@ struct SearchView: View {
             }
         }
         .onAppear {
-            self.booksGetter.fetchBooks(query: "College")
+            self.booksGetter.fetchBooks(query: "University of Colorado")
         }
         .onChange(of: searchText) { newValue in
             self.booksGetter.fetchBooks(query: newValue)
