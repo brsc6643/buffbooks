@@ -7,37 +7,28 @@
 
 import SwiftUI
 
-
 struct MyListingsView: View {
-    
-//    init() {
-//        UITabBar.appearance().backgroundColor = UIColor.color1
-//        UITabBar.appearance().tintColor = .color1
-//        UITabBar.appearance().unselectedItemTintColor = .gray
-//    }
-//    
-    @StateObject var dataGetter : DataGetter
-    //@State var myListings: [BookSaleInfo] = []
+    @ObservedObject var dataGetter: DataGetter
  
     var body: some View {
-        NavigationView {
-            List(dataGetter.myListings) { book in
-                VStack(alignment: .leading){
+        List {
+            ForEach(dataGetter.myListings, id: \.self) { book in
+                VStack(alignment: .leading) {
                     Text(book.title)
-                    Text(book.authors)
-                    .swipeActions {
-                        Button(role: .destructive) {
-                            dataGetter.deleteListing(bookToDelete: book)
-                        } label: {
-                            Label("Delete", systemImage: "trash")
-                        }
-                    }
+                        .fontWeight(.bold)
+                    Text("By \(book.authors)")
                 }
             }
-            .navigationTitle("My Listings")
+            .onDelete(perform: delete)
         }
-        .onAppear {
-            dataGetter.loadMyListings()
-        }
+        .onAppear(perform: {
+            dataGetter.myListings = dataGetter.loadMyListingsFromUserDefaults()
+        })
+    }
+        
+ 
+    private func delete(at offsets: IndexSet) {
+        dataGetter.deleteMyListing(at: offsets)
     }
 }
+

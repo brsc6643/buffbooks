@@ -14,6 +14,8 @@ struct SellFormView: View {
     
     var dataGetter: DataGetter
     var id: String
+    var bookTitle: String
+    var bookAuthors: String
     
     @State private var tempName: String = ""
     @State private var tempContact: String = ""
@@ -59,14 +61,15 @@ struct SellFormView: View {
                         let newSellerInfo = SellerInfo(sellerName: tempName, sellerContact: tempContact, price: tempPrice, condition: tempCondition)
                         
                         dataGetter.saveSellerInfo(forBookId: id, sellerInfo: newSellerInfo)
-                        
-                        sellerModel.markAsForSale(name: tempName, contact: tempContact, price: tempPrice, condition: tempCondition)
-                        
-                        
-                        sellerModel.showingSellSheet = false
-                        BookDetailView(sellerModel: sellerModel, id: id, dataGetter: dataGetter)
-                        
+                        dataGetter.loadMyListings()
+                        let newBook = Book(id: UUID().uuidString, title: bookTitle, authors: bookAuthors, desc: "Description", imurl: "Image URL", url: "Book URL")
+                                        
+                        dataGetter.saveMyListing(newBook)
+                        dataGetter.myListings = dataGetter.loadMyListingsFromUserDefaults()
+                        presentationMode.wrappedValue.dismiss()
                     }
+                        
+                    
                     .padding()
                     .foregroundColor(.color1)
                     .font(.headline)
@@ -95,4 +98,5 @@ struct SellFormView: View {
         .toolbarColorScheme(.dark, for: .navigationBar)
     }
 }
+
 

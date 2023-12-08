@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7E5BD50C-7F7B-45E8-94D6-52D94737579E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BuffBooks/DataGetter.swift"
@@ -71,113 +71,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0A203A05-A84F-4984-B502-C50767672E4B"
+            uuid = "0D016D36-A4C9-442D-A4F2-2EBBD519CE25"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BuffBooks/MyListingsView.swift"
+            filePath = "BuffBooks/DataGetter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "saveMyListing(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0A203A05-A84F-4984-B502-C50767672E4B - 5e6553bd9ef0c246"
+                  uuid = "0D016D36-A4C9-442D-A4F2-2EBBD519CE25 - b1878297ababa1ff"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in BuffBooks.MyListingsView.body.getter : some"
+                  symbolName = "BuffBooks.DataGetter.addMyListing(BuffBooks.Book) -&gt; ()"
                   moduleName = "BuffBooks"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/MyListingsView.swift"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/DataGetter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "244">
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "173">
                </Location>
                <Location
-                  uuid = "0A203A05-A84F-4984-B502-C50767672E4B - 9ecc780975e8cb24"
+                  uuid = "0D016D36-A4C9-442D-A4F2-2EBBD519CE25 - b1878297ababa1ff"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BuffBooks.Book) -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.swipeActions&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(edge: SwiftUI.HorizontalEdge, allowsFullSwipe: Swift.Bool, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in BuffBooks.MyListingsView.body.getter : some"
+                  symbolName = "BuffBooks.DataGetter.addMyListing(BuffBooks.Book) -&gt; ()"
                   moduleName = "BuffBooks"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/MyListingsView.swift"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/DataGetter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "199">
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "38">
+               </Location>
+               <Location
+                  uuid = "0D016D36-A4C9-442D-A4F2-2EBBD519CE25 - 8e0fbaa1c3057b66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BuffBooks.DataGetter.saveMyListing(BuffBooks.Book) -&gt; ()"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/DataGetter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "66">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "099D1F39-4CF2-442D-AEFD-52CB8D9B7CBB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BuffBooks/LoginView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "099D1F39-4CF2-442D-AEFD-52CB8D9B7CBB - 1c5b59d8c71d22c0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.textInputAutocapitalization(Swift.Optional&lt;SwiftUI.TextInputAutocapitalization&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.shadow(color: SwiftUI.Color, radius: CoreGraphics.CGFloat, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.NavigationLink&lt;SwiftUI.Text, BuffBooks.HomeView&gt;, &lt;&lt;opaque return type of SwiftUI.View.alert(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.Alert) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in BuffBooks.LoginView.body.getter : some"
-                  moduleName = "BuffBooks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/LoginView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "79">
-               </Location>
-               <Location
-                  uuid = "099D1F39-4CF2-442D-AEFD-52CB8D9B7CBB - eb0123ab9ed968f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.textInputAutocapitalization(Swift.Optional&lt;SwiftUI.TextInputAutocapitalization&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.shadow(color: SwiftUI.Color, radius: CoreGraphics.CGFloat, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.NavigationLink&lt;SwiftUI.Text, BuffBooks.HomeView&gt;, &lt;&lt;opaque return type of SwiftUI.View.alert(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.Alert) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in BuffBooks.LoginView.body.getter : some"
-                  moduleName = "BuffBooks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/LoginView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "106">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9217193A-6487-4BB3-875B-37803451A765"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BuffBooks/MyListingsView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "body"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

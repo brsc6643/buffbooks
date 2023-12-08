@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Book : Identifiable, Codable {
+class Book : Identifiable, Codable, Hashable{
     var id : String
     var title: String
     var authors: String
@@ -16,6 +16,14 @@ class Book : Identifiable, Codable {
     var url: String
     var submittedBy: String
     
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: Book, rhs: Book) -> Bool {
+        lhs.id == rhs.id
+    }
     
     init(id: String, title: String, authors: String, desc: String, imurl: String, url: String) {
         self.id = id

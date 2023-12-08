@@ -89,16 +89,31 @@ class DataGetter: ObservableObject {
         
     }
     
-    func deleteListing(bookToDelete: Book) {
-        myListings.removeAll {$0.id == bookToDelete.id}
-        if let index = data.firstIndex(where: { $0.id == bookToDelete.id }) {
-            data.remove(at: index)
+    func saveMyListing(_ book: Book) {
+            var currentListings = loadMyListingsFromUserDefaults()
+            currentListings.append(book)
+            if let encoded = try? JSONEncoder().encode(currentListings) {
+                UserDefaults.standard.set(encoded, forKey: "MyListings")
+            }
         }
-        let encoder = JSONEncoder()
-        if let encodedData = try? encoder.encode(myListings) {
-            UserDefaults.standard.set(encodedData, forKey: "myListings")
+     
+        func loadMyListingsFromUserDefaults() -> [Book] {
+            if let savedListings = UserDefaults.standard.object(forKey: "MyListings") as? Data,
+               let decodedListings = try? JSONDecoder().decode([Book].self, from: savedListings) {
+                return decodedListings
+            }
+            return []
         }
-    }
+
+    func deleteMyListing(at offsets: IndexSet) {
+            var currentListings = loadMyListingsFromUserDefaults()
+            currentListings.remove(atOffsets: offsets)
+            if let encoded = try? JSONEncoder().encode(currentListings) {
+                UserDefaults.standard.set(encoded, forKey: "MyListings")
+            }
+            // Reload listings
+            self.myListings = currentListings
+        }
     
  
     init() {
