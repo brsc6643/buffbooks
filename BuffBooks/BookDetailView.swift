@@ -10,7 +10,7 @@ import SwiftyJSON
 import SDWebImageSwiftUI
 
 struct BookDetailView: View {
-    //@Binding var book: Book?
+    //var book: Book
     @Environment(\.presentationMode) var presentationMode
     
     @StateObject var sellerModel: SellerModel
