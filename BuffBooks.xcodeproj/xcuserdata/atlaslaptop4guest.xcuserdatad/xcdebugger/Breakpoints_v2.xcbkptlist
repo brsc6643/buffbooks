@@ -23,54 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7E5BD50C-7F7B-45E8-94D6-52D94737579E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BuffBooks/DataGetter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "loadMyListings()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7E5BD50C-7F7B-45E8-94D6-52D94737579E - 1e3437c9758ad7e8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BuffBooks.DataGetter.loadMyListings() -&gt; ()"
-                  moduleName = "BuffBooks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/DataGetter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "62">
-               </Location>
-               <Location
-                  uuid = "7E5BD50C-7F7B-45E8-94D6-52D94737579E - 1e3437c9758ad7e8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BuffBooks.DataGetter.loadMyListings() -&gt; ()"
-                  moduleName = "BuffBooks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/DataGetter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0D016D36-A4C9-442D-A4F2-2EBBD519CE25"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -78,57 +30,10 @@
             filePath = "BuffBooks/DataGetter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "saveMyListing(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0D016D36-A4C9-442D-A4F2-2EBBD519CE25 - b1878297ababa1ff"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BuffBooks.DataGetter.addMyListing(BuffBooks.Book) -&gt; ()"
-                  moduleName = "BuffBooks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/DataGetter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "173">
-               </Location>
-               <Location
-                  uuid = "0D016D36-A4C9-442D-A4F2-2EBBD519CE25 - b1878297ababa1ff"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BuffBooks.DataGetter.addMyListing(BuffBooks.Book) -&gt; ()"
-                  moduleName = "BuffBooks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/DataGetter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "38">
-               </Location>
-               <Location
-                  uuid = "0D016D36-A4C9-442D-A4F2-2EBBD519CE25 - 8e0fbaa1c3057b66"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BuffBooks.DataGetter.saveMyListing(BuffBooks.Book) -&gt; ()"
-                  moduleName = "BuffBooks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/DataGetter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "66">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

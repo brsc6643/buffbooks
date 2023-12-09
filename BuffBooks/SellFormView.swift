@@ -61,11 +61,17 @@ struct SellFormView: View {
                         let newSellerInfo = SellerInfo(sellerName: tempName, sellerContact: tempContact, price: tempPrice, condition: tempCondition)
                         
                         dataGetter.saveSellerInfo(forBookId: id, sellerInfo: newSellerInfo)
-                        dataGetter.loadMyListings()
+                        dataGetter.loadMyListingsFromUserDefaults()
                         let newBook = Book(id: UUID().uuidString, title: bookTitle, authors: bookAuthors, desc: "Description", imurl: "Image URL", url: "Book URL")
                                         
                         dataGetter.saveMyListing(newBook)
                         dataGetter.myListings = dataGetter.loadMyListingsFromUserDefaults()
+                        
+                        let saleInfoString = "\(bookTitle)\n \(bookAuthors)\n\n For sale by: \(tempName)\n Contact: \(tempContact)\n Price: $\(tempPrice)\n Condition: \(tempCondition)\n"
+                           dataGetter.saleInformation.append(saleInfoString)
+                        
+                        dataGetter.saveSaleInformation()
+                        
                         presentationMode.wrappedValue.dismiss()
                     }
                         

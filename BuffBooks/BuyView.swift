@@ -15,7 +15,7 @@ struct BuyView: View {
     
     var body: some View {
         NavigationView {
-            ListView()
+            ListView(booksGetter: booksGetter)
             
                 //.navigationBarTitle("Buy")
                 .navigationBarBackButtonHidden(true)

@@ -13,6 +13,7 @@ class DataGetter: ObservableObject {
     @Published var data = [Book]()
     @Published var selectedBook: Book?
     @Published var myListings: [Book] = []
+    @Published var saleInformation: [String] = []
     //var bookToDelete: BookSaleInfo
  
     // Fetch books with a specified query
@@ -75,19 +76,6 @@ class DataGetter: ObservableObject {
         }
     }
     
-    func loadMyListings() {
-        guard let currentUserEmail = UserDefaults.standard.string(forKey: "currentUserEmail") else {
-            print("Email not found")
-            return
-        }
-        
-        print("Current user email: \(currentUserEmail)")
-        
-        myListings = data.filter { $0.submittedBy == currentUserEmail }
-        
-        print("Filtered books: \(myListings)")
-        
-    }
     
     func saveMyListing(_ book: Book) {
             var currentListings = loadMyListingsFromUserDefaults()
@@ -115,9 +103,21 @@ class DataGetter: ObservableObject {
             self.myListings = currentListings
         }
     
+    
+    func saveSaleInformation() {
+        UserDefaults.standard.set(saleInformation, forKey: "saleInformation")
+    }
+ 
+    func loadSaleInformation() {
+        if let savedData = UserDefaults.standard.array(forKey: "saleInformation") as? [String] {
+            saleInformation = savedData
+        }
+    }
  
     init() {
         fetchBooks(query: "College") // Initial fetch with a default search query
+        loadSaleInformation()
+        
         //uncomment the below line to reset listing storage
         //resetUserDefaults()
     }

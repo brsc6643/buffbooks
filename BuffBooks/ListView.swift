@@ -10,7 +10,7 @@ import SwiftyJSON
 import SDWebImageSwiftUI
  
 struct ListView: View {
-    @ObservedObject var booksGetter = DataGetter()
+    @ObservedObject var booksGetter: DataGetter
     @State private var searchText = ""
  
     var body: some View {
