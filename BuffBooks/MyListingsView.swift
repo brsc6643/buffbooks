@@ -9,19 +9,32 @@ import SwiftUI
 
 struct MyListingsView: View {
     @ObservedObject var dataGetter: DataGetter
+    @State private var isEditing = false
+    @State private var editingIndex: Int = 0
  
     var body: some View {
         NavigationView {
             List {
-                ForEach(dataGetter.saleInformation, id: \.self) { saleInfo in
-                    Text(saleInfo)
+                ForEach(dataGetter.saleInformation.indices, id: \.self) { index in
+                    HStack {
+                        Text(dataGetter.saleInformation[index])
+                        Spacer()
+                        Button("Edit") {
+                            editingIndex = index
+                            isEditing = true // Show the edit sheet
+                        }
+                    }
                 }
             }
             .navigationBarTitle("My Listings")
-            // ... Other view components
+            // Present the edit view when isEditing is true
+            .sheet(isPresented: $isEditing) {
+                EditSaleInfoView(saleInfo: $dataGetter.saleInformation[editingIndex], dataGetter: dataGetter)
+            }
         }
     }
 }
+
 
     
     

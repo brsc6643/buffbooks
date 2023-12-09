@@ -16,7 +16,6 @@ class DataGetter: ObservableObject {
     @Published var saleInformation: [String] = []
     //var bookToDelete: BookSaleInfo
  
-    // Fetch books with a specified query
     func fetchBooks(query: String) {
         guard !query.isEmpty, let formattedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             self.data = []
@@ -85,13 +84,13 @@ class DataGetter: ObservableObject {
             }
         }
      
-        func loadMyListingsFromUserDefaults() -> [Book] {
-            if let savedListings = UserDefaults.standard.object(forKey: "MyListings") as? Data,
-               let decodedListings = try? JSONDecoder().decode([Book].self, from: savedListings) {
-                return decodedListings
-            }
-            return []
+    func loadMyListingsFromUserDefaults() -> [Book] {
+        if let savedListings = UserDefaults.standard.object(forKey: "MyListings") as? Data,
+           let decodedListings = try? JSONDecoder().decode([Book].self, from: savedListings) {
+            return decodedListings
         }
+        return []
+    }
 
     func deleteMyListing(at offsets: IndexSet) {
             var currentListings = loadMyListingsFromUserDefaults()
@@ -119,6 +118,6 @@ class DataGetter: ObservableObject {
         loadSaleInformation()
         
         //uncomment the below line to reset listing storage
-        //resetUserDefaults()
+        resetUserDefaults()
     }
 }

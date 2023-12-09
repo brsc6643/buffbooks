@@ -119,7 +119,7 @@ struct BookDetailView: View {
                     .padding(.horizontal)
                 } //end vstack
                 .sheet(isPresented: $sellerModel.showingSellSheet) {
-                    SellFormView(sellerModel: sellerModel, dataGetter: dataGetter, id: id,bookTitle:  sellerModel.book?.title ?? "", bookAuthors: sellerModel.book?.authors ?? "")
+                    SellFormView(sellerModel: sellerModel, dataGetter: dataGetter, id: id, bookTitle:  sellerModel.book?.title ?? "", bookAuthors: sellerModel.book?.authors ?? "")
                 }
 
             Button("Close") {
