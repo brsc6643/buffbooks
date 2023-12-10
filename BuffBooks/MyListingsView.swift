@@ -11,6 +11,7 @@ struct MyListingsView: View {
     @ObservedObject var dataGetter: DataGetter
     @State private var isEditing = false
     @State private var editingIndex: Int = 0
+    @State private var editingContent: String = ""
  
     var body: some View {
         NavigationView {
@@ -21,25 +22,22 @@ struct MyListingsView: View {
                         Spacer()
                         Button("Edit") {
                             editingIndex = index
-                            isEditing = true // Show the edit sheet
+                            editingContent = dataGetter.saleInformation[index]
+                            isEditing = true
                         }
                     }
                 }
+                .onDelete(perform: delete) // Swipe-to-delete functionality
             }
             .navigationBarTitle("My Listings")
-            // Present the edit view when isEditing is true
             .sheet(isPresented: $isEditing) {
-                EditSaleInfoView(saleInfo: $dataGetter.saleInformation[editingIndex], dataGetter: dataGetter)
+                EditSaleInfoView(saleInfo: $editingContent, dataGetter: dataGetter, index: editingIndex)
             }
         }
     }
+ 
+    private func delete(at offsets: IndexSet) {
+        dataGetter.saleInformation.remove(atOffsets: offsets)
+        dataGetter.saveSaleInformation()
+    }
 }
-
-
-    
-    
-//        private func delete(at offsets: IndexSet) {
-//            dataGetter.deleteMyListing(at: offsets)
-//        }
-//}
-

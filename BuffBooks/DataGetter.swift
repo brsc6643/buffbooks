@@ -43,7 +43,7 @@ class DataGetter: ObservableObject {
                         let id = item["id"].stringValue
                         let title = item["volumeInfo"]["title"].stringValue
                         let authorsArray = item["volumeInfo"]["authors"].arrayValue.map { $0.stringValue }
-                        let author = authorsArray.joined(separator: ", ") // Handles cases where authors may be nil by joining an empty array if needed
+                        let author = authorsArray.joined(separator: ", ") // if authors is nil
                         let description = item["volumeInfo"]["description"].stringValue
                         let imurl = item["volumeInfo"]["imageLinks"]["thumbnail"].stringValue
                         let webReaderLink = item["accessInfo"]["webReaderLink"].stringValue
@@ -68,6 +68,7 @@ class DataGetter: ObservableObject {
         }
     }
     
+    //func to clear database
     func resetUserDefaults() {
         if let bundleID = Bundle.main.bundleIdentifier {
             UserDefaults.standard.removePersistentDomain(forName: bundleID)
@@ -75,49 +76,29 @@ class DataGetter: ObservableObject {
         }
     }
     
-    
-    func saveMyListing(_ book: Book) {
-            var currentListings = loadMyListingsFromUserDefaults()
-            currentListings.append(book)
-            if let encoded = try? JSONEncoder().encode(currentListings) {
-                UserDefaults.standard.set(encoded, forKey: "MyListings")
-            }
-        }
-     
-    func loadMyListingsFromUserDefaults() -> [Book] {
-        if let savedListings = UserDefaults.standard.object(forKey: "MyListings") as? Data,
-           let decodedListings = try? JSONDecoder().decode([Book].self, from: savedListings) {
-            return decodedListings
-        }
-        return []
-    }
-
-    func deleteMyListing(at offsets: IndexSet) {
-            var currentListings = loadMyListingsFromUserDefaults()
-            currentListings.remove(atOffsets: offsets)
-            if let encoded = try? JSONEncoder().encode(currentListings) {
-                UserDefaults.standard.set(encoded, forKey: "MyListings")
-            }
-            // Reload listings
-            self.myListings = currentListings
-        }
-    
-    
     func saveSaleInformation() {
         UserDefaults.standard.set(saleInformation, forKey: "saleInformation")
     }
+    
  
     func loadSaleInformation() {
         if let savedData = UserDefaults.standard.array(forKey: "saleInformation") as? [String] {
             saleInformation = savedData
         }
     }
+    
+    func updateSaleInformation(with updatedInfo: String, atIndex index: Int) {
+            guard saleInformation.indices.contains(index) else { return }
+            saleInformation[index] = updatedInfo
+            saveSaleInformation()
+        }
+    
  
     init() {
         fetchBooks(query: "College") // Initial fetch with a default search query
         loadSaleInformation()
         
         //uncomment the below line to reset listing storage
-        resetUserDefaults()
+        //resetUserDefaults()
     }
 }

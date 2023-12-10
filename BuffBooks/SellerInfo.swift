@@ -28,5 +28,5 @@ func getBookSaleInfo(forBookId id: String) -> BookSaleInfo {
         print("Sellers: \(bookSaleInfo.sellers)")
         return bookSaleInfo
     }
-    return BookSaleInfo(id: id, sellers: [])
+    return BookSaleInfo(id: id, bookTitle: "", sellers: [])
 }

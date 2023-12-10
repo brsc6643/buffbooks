@@ -89,6 +89,7 @@ struct BookDetailView: View {
                             Text("This book currently has \(bookSaleInfo.sellers.count) listings:").padding()
                         }
                     }
+                    
                         ForEach(bookSaleInfo.sellers, id: \.self) { seller in
                             VStack(alignment: .center) {
                                 Text("For sale by: \(seller.sellerName)")
@@ -100,13 +101,10 @@ struct BookDetailView: View {
                                 Text("Condition: \(seller.condition)")
                             }
                             .padding()
+
                         }
-//                        else {
-//                            Text("Uh oh! It looks like nobody is selling this book right now. If you have this book for sale, press the button below.")
-//                                .font(.headline)
-//                                .multilineTextAlignment(.leading)
-//                                .padding()
-//                        }
+                    }
+            
                     Button("Sell") {
                         sellerModel.showingSellSheet = true
                     }
@@ -152,4 +150,4 @@ struct BookDetailView: View {
             }
         }
     }
-}
+

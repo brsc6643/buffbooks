@@ -21,17 +21,7 @@ struct SellFormView: View {
     @State private var tempContact: String = ""
     @State private var tempPrice: String = ""
     @State private var tempCondition: String = ""
- 
-    
-//    init(sellerModel: SellerModel) {
-//        self.sellerModel = sellerModel
-//        // Initialize temporary variables with current values
-//        _tempName = State(initialValue: sellerModel.sellerName)
-//        _tempContact = State(initialValue: sellerModel.sellerContact)
-//        _tempPrice = State(initialValue: sellerModel.salePrice)
-//        _tempCondition = State(initialValue: sellerModel.saleCondition)
-//    }
-//    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -60,20 +50,15 @@ struct SellFormView: View {
                     Button("Submit") {
                         let newSellerInfo = SellerInfo(sellerName: tempName, sellerContact: tempContact, price: tempPrice, condition: tempCondition)
                         
-                        //UserDefaults.standard.set(encoded, forKey: "BookSaleInfo_\(id)")
-
                         dataGetter.saveSellerInfo(forBookId: id, sellerInfo: newSellerInfo)
-                        dataGetter.loadMyListingsFromUserDefaults()
                         
                         let newBook = Book(id: UUID().uuidString, title: bookTitle, authors: bookAuthors, desc: "Description", imurl: "Image URL", url: "Book URL")
                                         
-                        dataGetter.saveMyListing(newBook)
-                        dataGetter.myListings = dataGetter.loadMyListingsFromUserDefaults()
                         
                         let saleInfoString = "\(bookTitle)\n \(bookAuthors)\n\n For sale by: \(tempName)\n Contact: \(tempContact)\n Price: $\(tempPrice)\n Condition: \(tempCondition)\n"
                         
                         dataGetter.saleInformation.append(saleInfoString)
-                        
+                                            
                         dataGetter.saveSaleInformation()
                         
                         

@@ -9,5 +9,7 @@ import SwiftUI
 
 struct BookSaleInfo: Codable, Hashable {
     var id: String
+    var bookTitle: String
+    var bookAuthors: String?
     var sellers: [SellerInfo]
 }
