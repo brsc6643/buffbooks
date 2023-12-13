@@ -48,7 +48,8 @@ struct SellFormView: View {
                         .padding(.bottom)
 
                     Button("Submit") {
-                        let newSellerInfo = SellerInfo(sellerName: tempName, sellerContact: tempContact, price: tempPrice, condition: tempCondition)
+                        let currentUserEmail = getCurrentUserEmail();
+                        let newSellerInfo = SellerInfo(sellerName: tempName, sellerContact: tempContact, price: tempPrice, condition: tempCondition, submittedBy: currentUserEmail)
                         
                         dataGetter.saveSellerInfo(forBookId: id, sellerInfo: newSellerInfo)
                         

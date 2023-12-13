@@ -93,6 +93,13 @@ class DataGetter: ObservableObject {
             saveSaleInformation()
         }
     
+    func filterListingsByEmail(currentUserEmail: String) {
+        myListings = data.filter { book in
+            let bookSaleInfo = getBookSaleInfo(forBookId: book.id)
+            return bookSaleInfo.sellers.contains(where: { $0.submittedBy == currentUserEmail})
+        }
+    }
+    
  
     init() {
         fetchBooks(query: "College") // Initial fetch with a default search query

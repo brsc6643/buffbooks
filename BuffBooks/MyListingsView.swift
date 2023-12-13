@@ -34,6 +34,10 @@ struct MyListingsView: View {
                 EditSaleInfoView(saleInfo: $editingContent, dataGetter: dataGetter, index: editingIndex)
             }
         }
+        .onAppear{
+            let currentUserEmail = getCurrentUserEmail()
+            booksGetter.filterListingsByEmail(currentUserEmail: currentUserEmail)
+        }
     }
  
     private func delete(at offsets: IndexSet) {

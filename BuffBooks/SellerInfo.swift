@@ -12,14 +12,8 @@ struct SellerInfo: Codable, Hashable {
     var sellerContact: String
     var price: String
     var condition: String
+    var submittedBy: String
 }
-
-//struct Listing: Identifiable, Codable {
-//    let id: String
-//    let bookName: String
-//    let authors: String
-//    let sellerInfo: SellerInfo
-//}
 
 func getBookSaleInfo(forBookId id: String) -> BookSaleInfo {
     let decoder = JSONDecoder()
