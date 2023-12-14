@@ -56,11 +56,15 @@ struct SellFormView: View {
                         var bookSaleInfo = dataGetter.allBookSaleInfos.first(where: { $0.id == id }) ?? BookSaleInfo(id: id, bookTitle: bookTitle, bookAuthors: bookAuthors, sellers: [])
                         bookSaleInfo.sellers.append(newSellerInfo)
                         
+                        
+                        
                         if let index = dataGetter.allBookSaleInfos.firstIndex(where: { $0.id == id }) {
                             dataGetter.allBookSaleInfos[index] = bookSaleInfo
                         } else {
                             dataGetter.allBookSaleInfos.append(bookSaleInfo)
                         }
+                        
+                        dataGetter.saveBookSaleInfos() //store book sale listings in userdefaults for consistency purposes
                         
                         //save info into BookSaleInfo object
                         dataGetter.saveSellerInfo(forBookId: id, sellerInfo: newSellerInfo)

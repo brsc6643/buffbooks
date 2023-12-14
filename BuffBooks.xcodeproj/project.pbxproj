@@ -26,6 +26,7 @@
 		2A904B472AF4201300C19977 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A904B462AF4201300C19977 /* DataGetter.swift */; };
 		2A904B4A2AF4228500C19977 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2A904B492AF4228500C19977 /* SwiftyJSON */; };
 		2A904B4D2AF423D300C19977 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2A904B4C2AF423D300C19977 /* SDWebImageSwiftUI */; };
+		2A922BD52B2AEA9600B7D328 /* SellerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A922BD42B2AEA9600B7D328 /* SellerView.swift */; };
 		2A927C332B06B4B2008AB56D /* SellFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A927C322B06B4B1008AB56D /* SellFormView.swift */; };
 		2A94C3F42B23A439005BD1CE /* BookListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94C3F32B23A439005BD1CE /* BookListingView.swift */; };
 		2A94C3F62B23A4D8005BD1CE /* SellerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94C3F52B23A4D8005BD1CE /* SellerInfoView.swift */; };
@@ -78,6 +79,7 @@
 		2A9049582AF9964C0020EBFC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		2A904B462AF4201300C19977 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		2A904B4E2AF4358900C19977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2A922BD42B2AEA9600B7D328 /* SellerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerView.swift; sourceTree = "<group>"; };
 		2A927C322B06B4B1008AB56D /* SellFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellFormView.swift; sourceTree = "<group>"; };
 		2A94C3F32B23A439005BD1CE /* BookListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListingView.swift; sourceTree = "<group>"; };
 		2A94C3F52B23A4D8005BD1CE /* SellerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				2A904B4E2AF4358900C19977 /* Info.plist */,
 				2A98CF342B19338000262B15 /* MyListingsView.swift */,
+				2A922BD42B2AEA9600B7D328 /* SellerView.swift */,
 				2A900A9A2B25152600C33587 /* EditSaleInfoView.swift */,
 				2A94C3F32B23A439005BD1CE /* BookListingView.swift */,
 				2A94C3F72B23CB11005BD1CE /* SellerDetailSheet.swift */,
@@ -336,6 +339,7 @@
 				2A904B472AF4201300C19977 /* DataGetter.swift in Sources */,
 				2A8BC5252AEADACA00E9C638 /* LoginView.swift in Sources */,
 				2A8E73272AFD73D800D3DD8B /* BookDetailView.swift in Sources */,
+				2A922BD52B2AEA9600B7D328 /* SellerView.swift in Sources */,
 				2A9049592AF9964C0020EBFC /* ListView.swift in Sources */,
 				2A94C3F42B23A439005BD1CE /* BookListingView.swift in Sources */,
 				2A8E73292AFED6EC00D3DD8B /* Book.swift in Sources */,

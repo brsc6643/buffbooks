@@ -106,6 +106,21 @@ class DataGetter: ObservableObject {
             bookSaleInfo.sellers.contains(where: { $0.submittedBy == currentUserEmail} )
         }
     }
+    
+    func saveBookSaleInfos() {
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(allBookSaleInfos) {
+                UserDefaults.standard.set(encoded, forKey: "allBookSaleInfos")
+            }
+        }
+     
+    func loadBookSaleInfos() {
+        let decoder = JSONDecoder()
+        if let savedBookSaleInfos = UserDefaults.standard.object(forKey: "allBookSaleInfos") as? Data,
+           let loadedBookSaleInfos = try? decoder.decode([BookSaleInfo].self, from: savedBookSaleInfos) {
+            allBookSaleInfos = loadedBookSaleInfos
+        }
+    }
  
     init() {
         fetchBooks(query: "College") // Initial fetch with a default search query

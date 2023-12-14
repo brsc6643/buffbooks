@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    @EnvironmentObject var userData: UserData
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.color1
@@ -27,13 +27,16 @@ struct HomeView: View {
                             .id(resetKey)
                     }
                 
-                MyListingsView(dataGetter: dataGetter)
+                MyListingsView(listings: dataGetter.fetchListingsForCurrentUser(currentUserEmail: userData.userEmail ?? ""))
                     .tabItem {
                         Label("My Listings", systemImage: "list.bullet")
                             .onTapGesture{ resetKey = UUID() }
                     }
             }
             .navigationBarBackButtonHidden(true)
+            .onAppear {
+                dataGetter.loadBookSaleInfos()
+            }
         //}
         //.navigationBarBackButtonHidden(true)
     }
