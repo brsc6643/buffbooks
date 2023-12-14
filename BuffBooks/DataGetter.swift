@@ -14,6 +14,7 @@ class DataGetter: ObservableObject {
     @Published var selectedBook: Book?
     @Published var myListings: [BookSaleInfo] = []
     @Published var saleInformation: [String] = []
+    @Published var allBookSaleInfos: [BookSaleInfo] = []
     //var bookToDelete: BookSaleInfo
  
     func fetchBooks(query: String) {
@@ -100,6 +101,11 @@ class DataGetter: ObservableObject {
         }
     }
     
+    func fetchListingsForCurrentUser(currentUserEmail: String) -> [BookSaleInfo] {
+        return allBookSaleInfos.filter { bookSaleInfo in
+            bookSaleInfo.sellers.contains(where: { $0.submittedBy == currentUserEmail} )
+        }
+    }
  
     init() {
         fetchBooks(query: "College") // Initial fetch with a default search query

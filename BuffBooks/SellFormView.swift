@@ -50,7 +50,17 @@ struct SellFormView: View {
 
                     Button("Submit") {
                         let currentUserEmail = userData.getCurrentUserEmail();
+                        
                         let newSellerInfo = SellerInfo(sellerName: tempName, sellerContact: tempContact, price: tempPrice, condition: tempCondition, submittedBy: currentUserEmail ?? "")
+                        
+                        var bookSaleInfo = dataGetter.allBookSaleInfos.first(where: { $0.id == id }) ?? BookSaleInfo(id: id, bookTitle: bookTitle, bookAuthors: bookAuthors, sellers: [])
+                        bookSaleInfo.sellers.append(newSellerInfo)
+                        
+                        if let index = dataGetter.allBookSaleInfos.firstIndex(where: { $0.id == id }) {
+                            dataGetter.allBookSaleInfos[index] = bookSaleInfo
+                        } else {
+                            dataGetter.allBookSaleInfos.append(bookSaleInfo)
+                        }
                         
                         //save info into BookSaleInfo object
                         dataGetter.saveSellerInfo(forBookId: id, sellerInfo: newSellerInfo)
