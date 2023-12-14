@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SellFormView: View {
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var userData: UserData
     
     @ObservedObject var sellerModel: SellerModel
     
@@ -48,9 +49,10 @@ struct SellFormView: View {
                         .padding(.bottom)
 
                     Button("Submit") {
-                        let currentUserEmail = getCurrentUserEmail();
-                        let newSellerInfo = SellerInfo(sellerName: tempName, sellerContact: tempContact, price: tempPrice, condition: tempCondition, submittedBy: currentUserEmail)
+                        let currentUserEmail = userData.getCurrentUserEmail();
+                        let newSellerInfo = SellerInfo(sellerName: tempName, sellerContact: tempContact, price: tempPrice, condition: tempCondition, submittedBy: currentUserEmail ?? "")
                         
+                        //save info into BookSaleInfo object
                         dataGetter.saveSellerInfo(forBookId: id, sellerInfo: newSellerInfo)
                         
                         let newBook = Book(id: UUID().uuidString, title: bookTitle, authors: bookAuthors, desc: "Description", imurl: "Image URL", url: "Book URL")

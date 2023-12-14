@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 class DataGetter: ObservableObject {
     @Published var data = [Book]()
     @Published var selectedBook: Book?
-    @Published var myListings: [Book] = []
+    @Published var myListings: [BookSaleInfo] = []
     @Published var saleInformation: [String] = []
     //var bookToDelete: BookSaleInfo
  
@@ -57,7 +57,7 @@ class DataGetter: ObservableObject {
         }.resume()
     }
     
-    func saveSellerInfo(forBookId id: String, sellerInfo: SellerInfo) {
+    func saveSellerInfo(forBookId id: String, sellerInfo: SellerInfo) { //appends sellerInfo to bookSaleInfo object in userdefaults at BookSaleInfo_\(id)
         var bookSaleInfo = getBookSaleInfo(forBookId: id)
         
         bookSaleInfo.sellers.append(sellerInfo)
@@ -94,8 +94,8 @@ class DataGetter: ObservableObject {
         }
     
     func filterListingsByEmail(currentUserEmail: String) {
-        myListings = data.filter { book in
-            let bookSaleInfo = getBookSaleInfo(forBookId: book.id)
+        myListings = myListings.filter { bookInfo in
+            let bookSaleInfo = getBookSaleInfo(forBookId: bookInfo.id)
             return bookSaleInfo.sellers.contains(where: { $0.submittedBy == currentUserEmail})
         }
     }

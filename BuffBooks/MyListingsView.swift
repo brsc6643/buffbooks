@@ -12,6 +12,9 @@ struct MyListingsView: View {
     @State private var isEditing = false
     @State private var editingIndex: Int = 0
     @State private var editingContent: String = ""
+    @EnvironmentObject var userData: UserData
+
+    
  
     var body: some View {
         NavigationView {
@@ -35,8 +38,9 @@ struct MyListingsView: View {
             }
         }
         .onAppear{
-            let currentUserEmail = getCurrentUserEmail()
-            booksGetter.filterListingsByEmail(currentUserEmail: currentUserEmail)
+            let currentUserEmail = userData.getCurrentUserEmail()
+            dataGetter.filterListingsByEmail(currentUserEmail: currentUserEmail ?? "")
+            print(userData.userEmail)
         }
     }
  
