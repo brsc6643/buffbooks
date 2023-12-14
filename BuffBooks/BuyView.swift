@@ -12,6 +12,7 @@ struct BuyView: View {
     @StateObject var booksGetter : DataGetter
     @State private var showingLogoutAlert = false
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var userData: UserData
     
     var body: some View {
         NavigationView {
@@ -43,6 +44,7 @@ struct BuyView: View {
                         message: Text("Are you sure you want to sign out?"),
                         primaryButton: .destructive(Text("Sign Out")) {
                             presentationMode.wrappedValue.dismiss()
+                            userData.logOut()
                         },
                         secondaryButton: .cancel()
                         )

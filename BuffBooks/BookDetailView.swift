@@ -12,6 +12,7 @@ import SDWebImageSwiftUI
 struct BookDetailView: View {
     //var book: Book
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var userData: UserData
     
     @StateObject var sellerModel: SellerModel
     var id: String
@@ -71,6 +72,14 @@ struct BookDetailView: View {
 //                                }
 //                            }
 //                        }
+                    
+                    Button(action: {
+                        userData.toggleFavorite(for: sellerModel.book ?? Book(id: "", title: "", authors: "", desc: "", imurl: "", url: ""))
+                            }) {
+                                Label(sellerModel.book?.isFavorited ?? false ? "Unfavorite" : "Favorite", systemImage: sellerModel.book?.isFavorited ?? false ? "star.fill" : "star")
+                            }
+                            .padding()
+                            .padding()
                 
                     let bookSaleInfo = getBookSaleInfo(forBookId: id)
                     if bookSaleInfo.sellers.isEmpty {
@@ -115,6 +124,8 @@ struct BookDetailView: View {
                     .background(Color.color2)
                     .cornerRadius(15)
                     .padding(.horizontal)
+            
+
                 } //end vstack
                 .sheet(isPresented: $sellerModel.showingSellSheet) {
                     SellFormView(sellerModel: sellerModel, dataGetter: dataGetter, id: id, bookTitle:  sellerModel.book?.title ?? "", bookAuthors: sellerModel.book?.authors ?? "")

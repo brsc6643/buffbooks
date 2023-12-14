@@ -15,6 +15,7 @@ class Book : Identifiable, Codable, Hashable{
     var imurl: String
     var url: String
     var submittedBy: String
+    var isFavorited: Bool = false
     
     
     func hash(into hasher: inout Hasher) {

@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct SellerView: View {
-    var seller: SellerInfo
- 
+    @Binding var seller: SellerInfo
+    @State private var showingEditView = false
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Seller: \(seller.sellerName)")
             Text("Contact: \(seller.sellerContact)")
-            Text("Price: $\(seller.price)")
+            Text("Price $\(seller.price)")
             Text("Condition: \(seller.condition)")
         }
         .padding()
+        .onTapGesture {
+            showingEditView = true
+        }
+        .sheet(isPresented: $showingEditView) {
+            EditSellerView(seller: $seller) { updatedSeller in
+                seller = updatedSeller
+            }
+        }
     }
 }

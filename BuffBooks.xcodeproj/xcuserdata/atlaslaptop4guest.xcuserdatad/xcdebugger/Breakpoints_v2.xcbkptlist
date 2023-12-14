@@ -36,5 +36,161 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CB136F3-9553-4F77-882E-FDEC96557E49"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BuffBooks/BuffBooksApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2CB136F3-9553-4F77-882E-FDEC96557E49 - 28a67e5eab909967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in BuffBooks.BuffBooksApp.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/BuffBooksApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "290">
+               </Location>
+               <Location
+                  uuid = "2CB136F3-9553-4F77-882E-FDEC96557E49 - 28a67e5eab909967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in BuffBooks.BuffBooksApp.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/BuffBooksApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "315">
+               </Location>
+               <Location
+                  uuid = "2CB136F3-9553-4F77-882E-FDEC96557E49 - 28a67e5eab909967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in BuffBooks.BuffBooksApp.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/BuffBooksApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "383">
+               </Location>
+               <Location
+                  uuid = "2CB136F3-9553-4F77-882E-FDEC96557E49 - 28a67e5eab909967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in BuffBooks.BuffBooksApp.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/BuffBooksApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "375">
+               </Location>
+               <Location
+                  uuid = "2CB136F3-9553-4F77-882E-FDEC96557E49 - fea501a77dd69ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in BuffBooks.BuffBooksApp.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/BuffBooksApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "83">
+               </Location>
+               <Location
+                  uuid = "2CB136F3-9553-4F77-882E-FDEC96557E49 - 9d8da2f2acf163bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0 in BuffBooks.BuffBooksApp.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/BuffBooksApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "253">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0AC810C-317E-4774-8AEA-62B2C95EDBEC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BuffBooks/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F0AC810C-317E-4774-8AEA-62B2C95EDBEC - 93850faeaab17a18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BuffBooks.ContentView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "F0AC810C-317E-4774-8AEA-62B2C95EDBEC - 93850faeaab17a18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BuffBooks.ContentView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Documents/GitHub/buffbooks/BuffBooks/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "342">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

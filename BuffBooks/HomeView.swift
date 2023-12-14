@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var userData: UserData
     
+    
     init() {
         UITabBar.appearance().backgroundColor = UIColor.color1
         UITabBar.appearance().tintColor = .color1
@@ -20,6 +21,7 @@ struct HomeView: View {
     @State private var resetKey = UUID()
     var body: some View {
         //NavigationView {
+        
             TabView {
                 BuyView(booksGetter: dataGetter)
                     .tabItem {
@@ -27,15 +29,22 @@ struct HomeView: View {
                             .id(resetKey)
                     }
                 
-                MyListingsView(listings: dataGetter.fetchListingsForCurrentUser(currentUserEmail: userData.userEmail ?? ""))
+                MyListingsView(listings: dataGetter.fetchListingsForCurrentUser(currentUserEmail: userData.userEmail ?? ""), dataGetter: dataGetter)
                     .tabItem {
                         Label("My Listings", systemImage: "list.bullet")
                             .onTapGesture{ resetKey = UUID() }
                     }
+                
+                FavoritesView()
+                    .tabItem {
+                        Label("Favorites", systemImage: "star")
+                    }
             }
+            .environmentObject(userData)
             .navigationBarBackButtonHidden(true)
             .onAppear {
                 dataGetter.loadBookSaleInfos()
+                userData.isSignedIn = true
             }
         //}
         //.navigationBarBackButtonHidden(true)

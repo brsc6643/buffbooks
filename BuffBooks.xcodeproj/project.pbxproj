@@ -28,8 +28,8 @@
 		2A904B4D2AF423D300C19977 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2A904B4C2AF423D300C19977 /* SDWebImageSwiftUI */; };
 		2A922BD52B2AEA9600B7D328 /* SellerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A922BD42B2AEA9600B7D328 /* SellerView.swift */; };
 		2A927C332B06B4B2008AB56D /* SellFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A927C322B06B4B1008AB56D /* SellFormView.swift */; };
-		2A94C3F42B23A439005BD1CE /* BookListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94C3F32B23A439005BD1CE /* BookListingView.swift */; };
-		2A94C3F62B23A4D8005BD1CE /* SellerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94C3F52B23A4D8005BD1CE /* SellerInfoView.swift */; };
+		2A9479892B2B930D00A6E7D7 /* EditSellerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9479882B2B930D00A6E7D7 /* EditSellerView.swift */; };
+		2A94798B2B2BA51400A6E7D7 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94798A2B2BA51400A6E7D7 /* FavoritesView.swift */; };
 		2A94C3F82B23CB11005BD1CE /* SellerDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94C3F72B23CB11005BD1CE /* SellerDetailSheet.swift */; };
 		2A96C16D2AFC21750025E75D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96C16C2AFC21750025E75D /* SearchBarView.swift */; };
 		2A98CF352B19338000262B15 /* MyListingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98CF342B19338000262B15 /* MyListingsView.swift */; };
@@ -81,8 +81,8 @@
 		2A904B4E2AF4358900C19977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2A922BD42B2AEA9600B7D328 /* SellerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerView.swift; sourceTree = "<group>"; };
 		2A927C322B06B4B1008AB56D /* SellFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellFormView.swift; sourceTree = "<group>"; };
-		2A94C3F32B23A439005BD1CE /* BookListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListingView.swift; sourceTree = "<group>"; };
-		2A94C3F52B23A4D8005BD1CE /* SellerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoView.swift; sourceTree = "<group>"; };
+		2A9479882B2B930D00A6E7D7 /* EditSellerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSellerView.swift; sourceTree = "<group>"; };
+		2A94798A2B2BA51400A6E7D7 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		2A94C3F72B23CB11005BD1CE /* SellerDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerDetailSheet.swift; sourceTree = "<group>"; };
 		2A96C16C2AFC21750025E75D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		2A98CF342B19338000262B15 /* MyListingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingsView.swift; sourceTree = "<group>"; };
@@ -145,10 +145,9 @@
 				2A904B4E2AF4358900C19977 /* Info.plist */,
 				2A98CF342B19338000262B15 /* MyListingsView.swift */,
 				2A922BD42B2AEA9600B7D328 /* SellerView.swift */,
+				2A9479882B2B930D00A6E7D7 /* EditSellerView.swift */,
 				2A900A9A2B25152600C33587 /* EditSaleInfoView.swift */,
-				2A94C3F32B23A439005BD1CE /* BookListingView.swift */,
 				2A94C3F72B23CB11005BD1CE /* SellerDetailSheet.swift */,
-				2A94C3F52B23A4D8005BD1CE /* SellerInfoView.swift */,
 				2A8BC5292AEB087900E9C638 /* BuyView.swift */,
 				2A98CF362B1933D700262B15 /* HomeView.swift */,
 				2A927C322B06B4B1008AB56D /* SellFormView.swift */,
@@ -164,6 +163,7 @@
 				2A96C16C2AFC21750025E75D /* SearchBarView.swift */,
 				2A8E73222AFD6BAF00D3DD8B /* SearchView.swift */,
 				2A8E73262AFD73D800D3DD8B /* BookDetailView.swift */,
+				2A94798A2B2BA51400A6E7D7 /* FavoritesView.swift */,
 				2A8F97E42B15AD38005F72C6 /* SellerModel.swift */,
 				2A8BC4FD2AEAD96500E9C638 /* Assets.xcassets */,
 				2A8BC4FF2AEAD96500E9C638 /* BuffBooks.entitlements */,
@@ -336,19 +336,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A94798B2B2BA51400A6E7D7 /* FavoritesView.swift in Sources */,
 				2A904B472AF4201300C19977 /* DataGetter.swift in Sources */,
 				2A8BC5252AEADACA00E9C638 /* LoginView.swift in Sources */,
 				2A8E73272AFD73D800D3DD8B /* BookDetailView.swift in Sources */,
 				2A922BD52B2AEA9600B7D328 /* SellerView.swift in Sources */,
 				2A9049592AF9964C0020EBFC /* ListView.swift in Sources */,
-				2A94C3F42B23A439005BD1CE /* BookListingView.swift in Sources */,
+				2A9479892B2B930D00A6E7D7 /* EditSellerView.swift in Sources */,
 				2A8E73292AFED6EC00D3DD8B /* Book.swift in Sources */,
 				2A98CF372B1933D700262B15 /* HomeView.swift in Sources */,
 				2A96C16D2AFC21750025E75D /* SearchBarView.swift in Sources */,
 				2A9CF7FA2B17D04E008EC469 /* SellerInfo.swift in Sources */,
 				2A94C3F82B23CB11005BD1CE /* SellerDetailSheet.swift in Sources */,
 				2A8E73232AFD6BAF00D3DD8B /* SearchView.swift in Sources */,
-				2A94C3F62B23A4D8005BD1CE /* SellerInfoView.swift in Sources */,
 				2A8BC4FC2AEAD96300E9C638 /* ContentView.swift in Sources */,
 				2A927C332B06B4B2008AB56D /* SellFormView.swift in Sources */,
 				2A8BC4FA2AEAD96300E9C638 /* BuffBooksApp.swift in Sources */,

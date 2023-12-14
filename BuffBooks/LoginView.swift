@@ -48,7 +48,7 @@ struct LoginView: View {
                     }
                     else {
                         self.navigated.toggle()
-                        isSignedIn = true
+                        userData.logIn()
                         userData.userEmail = email
                     }
                 }) {
