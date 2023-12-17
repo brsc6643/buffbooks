@@ -56,6 +56,9 @@ struct BuyView: View {
                 .background(Color.color1.edgesIgnoringSafeArea(.all))
                 .foregroundColor(Color.color4)
         }
+        .onAppear {
+            booksGetter.fetchBooks(query: "College")
+        }
         .navigationBarBackButtonHidden(true)
         .navigationTitle("Buy")
                     .toolbarBackground(
