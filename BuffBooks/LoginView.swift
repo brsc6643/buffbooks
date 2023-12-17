@@ -47,9 +47,8 @@ struct LoginView: View {
                         invalidAlert = true
                     }
                     else {
-                        self.navigated.toggle()
-                        userData.logIn()
-                        userData.userEmail = email
+                        navigated.toggle()
+                        userData.logIn(email: email)
                     }
                 }) {
                     Text("Login with Email")

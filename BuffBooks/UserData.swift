@@ -9,8 +9,14 @@ import SwiftUI
 
 class UserData : ObservableObject {
     @Published var userEmail: String?
-    @Published var isSignedIn: Bool
+    @Published var isSignedIn: Bool {
+        didSet {
+            UserDefaults.standard.set(isSignedIn, forKey: "isSignedIn")
+        }
+    }
     @Published var favoriteBooks: [Book] = []
+    
+    
     
     init(email: String? = nil) {
         self.userEmail = email
@@ -22,12 +28,16 @@ class UserData : ObservableObject {
         userEmail
     }
     
-    func logIn() {
+    func logIn(email: String) {
         isSignedIn = true
+        userEmail = email
+        UserDefaults.standard.set(email, forKey: "currentUserEmail")
     }
     
     func logOut() {
         isSignedIn = false
+        //userEmail = nil
+        UserDefaults.standard.removeObject(forKey: "CurrentUserEmail")
     }
     
     func toggleFavorite(for book: Book) {

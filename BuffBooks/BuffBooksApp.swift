@@ -13,11 +13,14 @@ struct BuffBooksApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(userData)
-                .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
-                    userData.isSignedIn = UserDefaults.standard.bool(forKey: "isSignedIn")
-                }
+            if userData.isSignedIn {
+                HomeView()
+                    .environmentObject(userData)
+            }
+            else {
+                LoginView()
+                    .environmentObject(userData)
+            }
         }
     }
 }
