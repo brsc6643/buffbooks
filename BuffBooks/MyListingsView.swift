@@ -21,9 +21,11 @@ struct MyListingsView: View {
                     Text("Authors: \(listing.bookAuthors ?? "Unknown")")
                         .font(.subheadline)
                     ForEach($listing.sellers, id: \.self) { $seller in
-                        SellerView(seller: $seller)
-                            .onChange(of: seller) { _ in
-                                dataGetter.saveBookSaleInfos()
+                        if userData.getCurrentUserEmail() == seller.submittedBy {
+                            SellerView(seller: $seller)
+                                .   onChange(of: seller) { _ in
+                                    dataGetter.saveBookSaleInfos()
+                                }
                             }
                     }
                 }

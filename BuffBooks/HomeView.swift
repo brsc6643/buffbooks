@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var userData: UserData
     
+    var dataGetter: DataGetter = DataGetter()
+    
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.color1
@@ -17,7 +19,6 @@ struct HomeView: View {
         UITabBar.appearance().unselectedItemTintColor = .gray
     }
     
-    @StateObject var dataGetter = DataGetter()
     @State private var resetKey = UUID()
     var body: some View {
         //NavigationView {
