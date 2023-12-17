@@ -37,6 +37,7 @@ class UserData : ObservableObject {
     func logOut() {
         isSignedIn = false
         //userEmail = nil
+        UserDefaults.standard.removeObject(forKey: "isSignedIn")
         UserDefaults.standard.removeObject(forKey: "CurrentUserEmail")
     }
     

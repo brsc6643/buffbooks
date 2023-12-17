@@ -10,15 +10,20 @@ import SwiftUI
 @main
 struct BuffBooksApp: App {
     @StateObject var userData = UserData()
+    @State private var isUserLoggedIn = false
+    
+    init() {
+        isUserLoggedIn = userData.isSignedIn
+    }
     
     var body: some Scene {
         WindowGroup {
-            if userData.isSignedIn {
-                HomeView()
+            if isUserLoggedIn {
+                HomeView(isUserLoggedIn: $isUserLoggedIn)
                     .environmentObject(userData)
             }
             else {
-                LoginView()
+                LoginView(isUserLoggedIn: $isUserLoggedIn)
                     .environmentObject(userData)
             }
         }
