@@ -94,17 +94,11 @@ class DataGetter: ObservableObject {
             saveSaleInformation()
         }
     
-    func filterListingsByEmail(currentUserEmail: String) {
-        myListings = myListings.filter { bookInfo in
-            let bookSaleInfo = getBookSaleInfo(forBookId: bookInfo.id)
-            return bookSaleInfo.sellers.contains(where: { $0.submittedBy == currentUserEmail})
-        }
-    }
-    
     func fetchListingsForCurrentUser(currentUserEmail: String) -> [BookSaleInfo] {
-        return allBookSaleInfos.filter { bookSaleInfo in
+        let filteredBooks =  allBookSaleInfos.filter { bookSaleInfo in
             bookSaleInfo.sellers.contains(where: { $0.submittedBy == currentUserEmail} )
         }
+        return filteredBooks
     }
     
     func saveBookSaleInfos() {

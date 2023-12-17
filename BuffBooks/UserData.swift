@@ -33,6 +33,7 @@ class UserData : ObservableObject {
     func toggleFavorite(for book: Book) {
             if let index = favoriteBooks.firstIndex(where: { $0.id == book.id }) {
                 favoriteBooks.remove(at: index)
+                book.isFavorited = false
             } else {
                 var newBook = book
                 newBook.isFavorited = true

@@ -192,5 +192,412 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "920BCFF0-C8AA-47FA-AB8E-8E782BCF9C6F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BuffBooks/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "920BCFF0-C8AA-47FA-AB8E-8E782BCF9C6F - 11787bafa71ed7b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.tabItem&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(() -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.tabItem&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(() -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.tabItem&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(() -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in BuffBooks.HomeView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1061">
+               </Location>
+               <Location
+                  uuid = "920BCFF0-C8AA-47FA-AB8E-8E782BCF9C6F - 11787bafa71ed7b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.tabItem&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(() -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.tabItem&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(() -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.tabItem&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(() -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in BuffBooks.HomeView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1053">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0AF0771-9396-4E3B-A7A1-B0BA5CA2D58B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BuffBooks/BookDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0E8B376-4EDB-4B47-B349-50EAD2C7A476"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BuffBooks/DataGetter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "fetchListingsForCurrentUser(currentUserEmail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A17D3A96-B362-4318-BE46-784158714E3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BuffBooks/MyListingsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "MyListingsView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "A17D3A96-B362-4318-BE46-784158714E3D - 4927298425737f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of BuffBooks.MyListingsView.listings : Swift.Array&lt;BuffBooks.BookSaleInfo&gt;"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "A17D3A96-B362-4318-BE46-784158714E3D - 85088d6689868594"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BuffBooks.MyListingsView.listings.getter : Swift.Array&lt;BuffBooks.BookSaleInfo&gt;"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "A17D3A96-B362-4318-BE46-784158714E3D - 1c6fb6aea0ffb8df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BuffBooks.MyListingsView.listings.setter : Swift.Array&lt;BuffBooks.BookSaleInfo&gt;"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "A17D3A96-B362-4318-BE46-784158714E3D - c16857962962732e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BuffBooks.MyListingsView.listings.modify : Swift.Array&lt;BuffBooks.BookSaleInfo&gt;"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "A17D3A96-B362-4318-BE46-784158714E3D - 2e0043c7eba78a09"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BuffBooks.MyListingsView.listings.modify : Swift.Array&lt;BuffBooks.BookSaleInfo&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "A17D3A96-B362-4318-BE46-784158714E3D - e14013145366a523"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BuffBooks.MyListingsView.$listings.getter : SwiftUI.Binding&lt;Swift.Array&lt;BuffBooks.BookSaleInfo&gt;&gt;"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE13CA61-F45E-4287-AF82-A0AC8A0EAA24"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BuffBooks/MyListingsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "EE13CA61-F45E-4287-AF82-A0AC8A0EAA24 - e014f47f6ddb17b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BuffBooks.MyListingsView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "317">
+               </Location>
+               <Location
+                  uuid = "EE13CA61-F45E-4287-AF82-A0AC8A0EAA24 - e014f47f6ddb17b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BuffBooks.MyListingsView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "305">
+               </Location>
+               <Location
+                  uuid = "EE13CA61-F45E-4287-AF82-A0AC8A0EAA24 - 7d64a7fcb347b992"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in BuffBooks.MyListingsView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "395">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9866DBD3-090A-4EC8-9826-E1B418D4D288"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BuffBooks/MyListingsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9866DBD3-090A-4EC8-9826-E1B418D4D288 - 7d64a7fcb347b973"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in BuffBooks.MyListingsView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "9866DBD3-090A-4EC8-9826-E1B418D4D288 - c14461a5bb066b2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.offset(x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, Swift.String)&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, BuffBooks.SellerInfo)&gt;, BuffBooks.SellerInfo, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in BuffBooks.MyListingsView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F135842E-0109-4F93-B261-C1B964E63DAE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BuffBooks/MyListingsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F135842E-0109-4F93-B261-C1B964E63DAE - c14461a5bb066971"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.offset(x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, Swift.String)&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, BuffBooks.SellerInfo)&gt;, BuffBooks.SellerInfo, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in BuffBooks.MyListingsView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "7149">
+               </Location>
+               <Location
+                  uuid = "F135842E-0109-4F93-B261-C1B964E63DAE - e158ff63491d6c04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 (SwiftUI.Binding&lt;BuffBooks.BookSaleInfo&gt;) -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, BuffBooks.SellerInfo)&gt;, BuffBooks.SellerInfo, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0&gt;)&gt;&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.offset(x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, Swift.String)&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, BuffBooks.SellerInfo)&gt;, BuffBooks.SellerInfo, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in BuffBooks.MyListingsView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "162">
+               </Location>
+               <Location
+                  uuid = "F135842E-0109-4F93-B261-C1B964E63DAE - 5008257bf613dcfd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (SwiftUI.Binding&lt;BuffBooks.BookSaleInfo&gt;) -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, BuffBooks.SellerInfo)&gt;, BuffBooks.SellerInfo, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0&gt;)&gt;&gt; in implicit closure #1 (SwiftUI.Binding&lt;BuffBooks.BookSaleInfo&gt;) -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, BuffBooks.SellerInfo)&gt;, BuffBooks.SellerInfo, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0&gt;)&gt;&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.offset(x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, Swift.String)&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.LazyMapSequence&lt;Swift.Range&lt;Swift.Int&gt;, (Swift.Int, BuffBooks.SellerInfo)&gt;, BuffBooks.SellerInfo, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in BuffBooks.MyListingsView.body.getter : some"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "583">
+               </Location>
+               <Location
+                  uuid = "F135842E-0109-4F93-B261-C1B964E63DAE - 4440cc47a451324e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper init from projected value of $listing : SwiftUI.Binding&lt;BuffBooks.BookSaleInfo&gt;"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "F135842E-0109-4F93-B261-C1B964E63DAE - 49751a74938aa0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "$listing.getter : SwiftUI.Binding&lt;BuffBooks.BookSaleInfo&gt;"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  uuid = "F135842E-0109-4F93-B261-C1B964E63DAE - 9ba4ef2d95353f5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "listing.getter : BuffBooks.BookSaleInfo"
+                  moduleName = "BuffBooks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atlaslaptop4guest/Downloads/buffbooks-main-3/BuffBooks/MyListingsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

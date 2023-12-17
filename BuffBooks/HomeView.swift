@@ -10,8 +10,6 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var userData: UserData
     
-    var dataGetter: DataGetter = DataGetter()
-    
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.color1
@@ -19,10 +17,11 @@ struct HomeView: View {
         UITabBar.appearance().unselectedItemTintColor = .gray
     }
     
+    @StateObject var dataGetter = DataGetter()
     @State private var resetKey = UUID()
     var body: some View {
         //NavigationView {
-        
+
             TabView {
                 BuyView(booksGetter: dataGetter)
                     .tabItem {
@@ -36,7 +35,7 @@ struct HomeView: View {
                             .onTapGesture{ resetKey = UUID() }
                     }
                 
-                FavoritesView()
+                FavoritesView(booksGetter: dataGetter)
                     .tabItem {
                         Label("Favorites", systemImage: "star")
                     }
