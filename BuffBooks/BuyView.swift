@@ -14,7 +14,7 @@ struct BuyView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var userData: UserData
     
-    @Binding var isUserLoggedIn: Bool
+//    @Binding var isUserLoggedIn: Bool
     
     var body: some View {
         NavigationView {
@@ -47,7 +47,7 @@ struct BuyView: View {
                         primaryButton: .destructive(Text("Sign Out")) {
                             presentationMode.wrappedValue.dismiss()
                             userData.logOut()
-                            isUserLoggedIn = false
+                            //isUserLoggedIn = false
                         },
                         secondaryButton: .cancel()
                         )

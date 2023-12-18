@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var userData: UserData
-    @Binding var isUserLoggedIn: Bool
+//    @Binding var isUserLoggedIn: Bool
     
     
 //    init() {
@@ -24,7 +24,7 @@ struct HomeView: View {
         //NavigationView {
 
             TabView {
-                BuyView(booksGetter: dataGetter, isUserLoggedIn: $isUserLoggedIn)
+                BuyView(booksGetter: dataGetter)
                     .tabItem {
                         Label("Home", systemImage: "house")
                             .id(resetKey)

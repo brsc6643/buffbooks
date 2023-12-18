@@ -60,6 +60,10 @@ struct FavoritesView: View {
             }
             .navigationTitle("Favorites")
             }
+        .onAppear {
+            userData.loadFavorites()
+        }
+        
         }
     }
 

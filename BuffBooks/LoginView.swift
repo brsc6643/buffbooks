@@ -14,7 +14,7 @@ struct LoginView: View {
     @State var navigated = false
     @State var isSignedIn: Bool = false
     
-    @Binding var isUserLoggedIn : Bool
+//    @Binding var isUserLoggedIn : Bool
     
     @EnvironmentObject var userData: UserData
     
@@ -41,7 +41,7 @@ struct LoginView: View {
                     .cornerRadius(8)
                     .shadow(radius:3)
                 
-                NavigationLink("", destination: HomeView(isUserLoggedIn: $isUserLoggedIn), isActive: $navigated)
+                NavigationLink("", destination: HomeView(), isActive: $navigated)
                 
                 
                 Button(action: {
@@ -51,7 +51,7 @@ struct LoginView: View {
                     else {
                         navigated.toggle()
                         userData.logIn(email: email)
-                        isUserLoggedIn = true
+                        //isUserLoggedIn = true
                     }
                 }) {
                     Text("Login with Email")

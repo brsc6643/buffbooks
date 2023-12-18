@@ -18,9 +18,9 @@ class UserData : ObservableObject {
     
     
     
-    init(email: String? = nil) {
-        self.userEmail = email
-        self.isSignedIn = UserDefaults.standard.bool(forKey: "isSignedIn")
+    init(email: String? = "guest") {
+        userEmail = email
+        isSignedIn = UserDefaults.standard.bool(forKey: "isSignedIn")
         loadFavorites()
     }
     
@@ -60,7 +60,7 @@ class UserData : ObservableObject {
             }
         }
 
-        private func loadFavorites() {
+        public func loadFavorites() {
             let decoder = JSONDecoder()
             if let userEmail = userEmail,
                let savedFavorites = UserDefaults.standard.data(forKey: "favorites_\(userEmail)"),
